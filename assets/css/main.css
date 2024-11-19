@@ -1011,24 +1011,29 @@ section,
 .services .service-item {
   background-color: var(--surface-color);
   box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1);
-  padding: 60px 30px 60px 70px;
+  padding: 40px 10px 40px 50px;
   transition: all ease-in-out 0.3s;
   border-radius: 18px;
   height: 100%;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* gap:10px; */
 }
 
 .services .service-item .icon {
-  position: absolute;
-  left: -20px;
-  top: calc(50% - 30px);
+  /* position: absolute; */
+  /* left: -20px; */
+  /* top: calc(50% - 30px); */
 }
 
 .services .service-item .icon i {
   font-size: 64px;
   line-height: 1;
   transition: 0.5s;
+  margin-right: 20px
 }
 
 .services .service-item h3 {
@@ -1859,6 +1864,31 @@ section,
   margin-top: 15px;
   transition: 0.3s;
 }
+
+.btn-styled {
+  background: linear-gradient(90deg, #ffffff, #ff8000);
+  color: #000;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.btn-styled:hover {
+  background: linear-gradient(90deg, #ff8000, #ffffff);
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-styled:active {
+  transform: scale(0.95);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
 
 .service-details .services-list a:first-child {
   margin-top: 0;
