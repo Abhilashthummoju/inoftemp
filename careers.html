@@ -283,9 +283,10 @@
             <input type="email" id="email" name="email" class="form-control" required>
           </div>
           <div class="mb-3">
-            <label for="resume">Upload Resume (file size should be less than 50kb)</label>
-            <input type="file" id="resume" name="resume" class="form-control" required>
+            <label for="resume">Resume Link (URL)</label>
+            <input type="url" id="resume" name="resume" class="form-control" placeholder="Enter the link to your resume" required>
           </div>
+          
           <input type="hidden" id="jobId" name="job_id">
 
           <div class="mb-3">
@@ -300,8 +301,10 @@
       <h3 class="sitename">Inofinitive SR</h3>
       <p>Inofinitive SR specializes in delivering top-notch customer support, technical solutions, and telemarketing services. We focus on providing efficient, reliable, and customized services to help businesses enhance customer satisfaction and grow</p>
       <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href="https://www.instagram.com/inofinitive?igsh=MTRmc3BkeGF2ems4Nw=="><i class="bi bi-instagram"></i></a>
         <a href=""><i class="bi bi-linkedin"></i></a>
+        <a href="https://x.com/inofinitiveSR"><i class="bi bi-twitter"></i></a>
+
       </div>
       <div class="container">
         <div class="copyright">
@@ -311,80 +314,35 @@
     </div>
   </footer>
 <!-- email js script -->
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script>
-    (function () {
-      // Initialize EmailJS
-      emailjs.init("DE7l6B5A8yl5l0LIH"); // Replace with your actual public key
-      console.log("EMAILJS Initialized");
-    })();
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("DE7l6B5A8yl5l0LIH"); // Replace with your EmailJS public key
+    console.log("EMAIL IS HERE")
+  })();
+
+  document.querySelector("#apply-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const form = event.target;
+    const formData = new FormData(form);
+
+    console.log(" EMAIL IS @ ",formData)
+    emailjs.sendForm("service_f5s2f3r", "template_67u4k0g", form)
+      .then(
+        function(response) {
+          console.log(" EMAIL IS abhi ",formData)
+          alert("Message sent successfully!");
+        },
+        function(error) {
+          console.log(" EMAIL IS error ",formData)
+          alert("Failed to send message. Please try again.");
+        }
+      );
+  });
+</script>
+
   
-    // Handle "Apply Now" button click
-    document.querySelectorAll(".apply-btn").forEach((btn) => {
-      btn.addEventListener("click", function () {
-        const jobId = this.getAttribute("data-job-id");
-        document.querySelector("#jobId").value = jobId; // Set job ID in hidden field
-      });
-    });
-  
-    // Handle form submission
-    document.querySelector("#apply-form").addEventListener("submit", function (event) {
-      event.preventDefault();
-  
-      const form = event.target;
-      const fileInput = document.querySelector("#resume");
-      const file = fileInput.files[0];
-  
-      // Check if file is selected and validate file size (less than 50KB)
-      if (file && file.size > 50 * 1024) {
-        console.log("FILE SIZE", file.size, 50 * 1024);
-        alert("File size exceeds 50KB. Please upload a smaller file.");
-        return;
-      }
-  
-      // Create a FormData object to hold form data and file
-      const formData = new FormData(form);
-      if (file) {
-        formData.append("resume", file); // Ensure file is added to FormData
-      }
-  
-      // Log FormData size before sending to check if it exceeds the limit
-      let formDataSize = 0;
-      formData.forEach((value, key) => {
-        // Get size of form fields
-        const valueSize = new TextEncoder().encode(value).length; // Get byte size of the value
-        formDataSize += valueSize;
-      });
-  
-      // Add file size to formDataSize if a file is uploaded
-      const totalSize = formDataSize + (file ? file.size : 0);
-  
-      console.log("Form Data Size (in bytes):", formDataSize);
-      console.log("File Size (in bytes):", file ? file.size : 0);
-      console.log("Total Payload Size (in bytes):", totalSize);
-      console.log("Total Payload Size (in KB):", totalSize / 1024);
-  
-      // If total size exceeds 50KB, show alert
-      if (totalSize > 50 * 1024) {
-        alert("The total payload size exceeds 50KB. Please reduce the size of your file or form data.");
-        return;
-      }
-  
-      // Send form data to EmailJS
-      emailjs.send("service_f5s2f3r", "template_67u4k0g", formData)
-        .then(
-          function (response) {
-            console.log("Message Sent Successfully: ", response);
-            alert("Your application has been submitted successfully!");
-            form.reset(); // Reset the form after successful submission
-          },
-          function (error) {
-            console.error("Failed to send message: ", error);
-            alert("Failed to submit your application. Please try again.");
-          }
-        );
-    });
-  </script>
      <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
