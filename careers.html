@@ -1,373 +1,495 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Careers - Inofinitive SR</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Careers - Inofinitive SR</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+    <!-- Favicons -->
+    <link href="assets/img/logo.jpg" rel="icon" />
+    <link href="assets/img/logo.jpg" rel="apple-touch-icon" />
 
-  <!-- Favicons -->
-  <link href="assets/img/logo.jpg" rel="icon">
-  <link href="assets/img/logo.jpg" rel="apple-touch-icon">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-  <style>
-    .job-listings .job-posting {
-      background: #f8f9fa;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      transition: transform 0.3s, box-shadow 0.3s;
-      height: 100%;
-    }
-
-    .job-listings .job-posting:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    }
-
-    .job-listings .job-posting h3 {
-      color: #333;
-      font-weight: 600;
-    }
-
-    .job-listings .job-posting p {
-      color: #555;
-      margin: 10px 0;
-    }
-
-    .job-listings .job-posting button {
-      background-color: #007bff;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 4px;
-      transition: background-color 0.3s;
-    }
-
-    .job-listings .job-posting button:hover {
-      background-color: #0056b3;
-    }
-
-    .apply-form-modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.6);
-      z-index: 1000;
-    }
-
-    .apply-form-modal-content {
-      background: #fff;
-      border-radius: 8px;
-      padding: 20px;
-      max-width: 500px;
-      margin: 100px auto;
-      position: relative;
-    }
-
-    .apply-form-modal-content .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      font-size: 24px;
-      color: #333;
-      cursor: pointer;
-    }
-
-    @media (max-width: 768px) {
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <style>
       .job-listings .job-posting {
+        background: #f8f9fa;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        transition: transform 0.3s, box-shadow 0.3s;
+        height: 100%;
+      }
+
+      .job-listings .job-posting:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .job-listings .job-posting h3 {
+        color: #333;
+        font-weight: 600;
+      }
+
+      .job-listings .job-posting p {
+        color: #555;
+        margin: 10px 0;
+      }
+
+      .job-listings .job-posting button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+      }
+
+      .job-listings .job-posting button:hover {
+        background-color: #0056b3;
+      }
+
+      .apply-form-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 1000;
+      }
+
+      .apply-form-modal-content {
+        background: #fff;
+        border-radius: 8px;
+        padding: 20px;
+        max-width: 500px;
+        margin: 100px auto;
+        position: relative;
+      }
+
+      .apply-form-modal-content .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 24px;
+        color: #333;
+        cursor: pointer;
+      }
+
+      @media (max-width: 768px) {
+        .job-listings .job-posting {
+          margin-bottom: 20px;
+        }
+      }
+
+      /* Meet Our Team Section */
+      .meet-our-team {
+        background-color: #f9f9f9;
+        padding: 60px 0;
+      }
+
+      .meet-our-team .section-title {
+        font-size: 28px;
+        font-weight: 700;
         margin-bottom: 20px;
       }
-    }
 
-    /* Meet Our Team Section */
-.meet-our-team {
-  background-color: #f9f9f9;
-  padding: 60px 0;
-}
+      .meet-our-team p {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #555;
+      }
 
-.meet-our-team .section-title {
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
+      .meet-our-team ul {
+        list-style: none;
+        padding: 0;
+      }
 
-.meet-our-team p {
-  font-size: 16px;
-  line-height: 1.8;
-  color: #555;
-}
+      .meet-our-team ul li {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 10px;
+      }
 
-.meet-our-team ul {
-  list-style: none;
-  padding: 0;
-}
+      .meet-our-team ul li::before {
+        content: "✔";
+        color: #007bff;
+        margin-right: 10px;
+      }
 
-.meet-our-team ul li {
-  font-size: 16px;
-  color: #555;
-  margin-bottom: 10px;
-}
+      .meet-our-team img {
+        max-width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
 
-.meet-our-team ul li::before {
-  content: "✔";
-  color: #007bff;
-  margin-right: 10px;
-}
-
-.meet-our-team img {
-  max-width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-  </style>
-</head>
-
-<body class="service-details-page">
-
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.jpg" alt="">
-        <h1 class="sitename">Inofinitive SR</h1>
-      </a>
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html#hero">Home</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="careers.html">Careers</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-    </div>
-  </header>
-
-  <main class="main">
-    <div class="page-title dark-background" style="background-image: url('assets/img/teamImage.jpg'); background-size: cover; background-position: center; padding: 100px 0;">
-      <div class="container position-relative">
-        <h1>Your Future Starts Here – Be Part of Something Exciting!</h1>
+  <body class="service-details-page">
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="container-fluid container-xl d-flex align-items-center justify-content-between"
+      >
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="assets/img/logo.jpg" alt="" />
+          <h1 class="sitename">Inofinitive SR</h1>
+        </a>
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html#hero">Home</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
       </div>
-    </div>
+    </header>
 
-    <!-- Meet Our Team Section -->
-<section id="meet-our-team" class="meet-our-team section py-5">
-  <div class="container">
-    <div class="row align-items-center">
-      
-      <!-- Team Image -->
-      <div class="col-md-6 text-center">
-        <img src="assets/img/team/team-1.jpg" alt="Our Team" class="img-fluid rounded shadow">
-      </div>
-
-      <!-- Team Content -->
-      <div class="col-md-6">
-        <h1 class="section-title">Meet Our Team</h1>
-        <p class="lead">
-          At <strong>Inofinitive SR</strong>, our team is the backbone of everything we achieve. We are a dynamic group of professionals with expertise in diverse fields, committed to delivering excellence every step of the way.
-        </p>
-        <p>
-          Our culture emphasizes collaboration, innovation, and integrity. We believe in fostering an environment where ideas thrive, and every member feels valued and empowered. Together, we tackle challenges, create solutions, and shape the future of our industry.
-        </p>
-        <p>
-          With a shared vision of growth and success, our team continues to set benchmarks, exceeding expectations and building lasting relationships with clients and partners.
-        </p>
-        <ul>
-          <li><strong>Our Mission:</strong> To empower businesses through innovative solutions.</li>
-          <li><strong>Our Vision:</strong> To be a global leader in providing exceptional technical and customer services.</li>
-          <li><strong>Core Values:</strong> Teamwork, Transparency, Creativity, and Excellence.</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-    <section id="job-listings" class="job-listings section">
-      <div class="container">
-        <div class="row gy-5">
-          <h1 style="text-align: center; font-weight: bold;">Open positions</h1>
-          <div class="col-md-4">
-            <div class="job-posting">
-              <h3>Frontend Developer</h3>
-              <p><strong>Job Description:</strong> Building and maintaining user interfaces using React.js.</p>
-              <p><strong>Required Skills:</strong> HTML, CSS, JavaScript, React.js, Git</p>
-              <button onclick="openApplyForm()" data-job-id="1">Apply</button>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="job-posting">
-              <h3>Backend Developer</h3>
-              <p><strong>Job Description:</strong> Work with Node.js and Express.js to build scalable backend services.</p>
-              <p><strong>Required Skills:</strong> Node.js, Express.js, MongoDB, APIs</p>
-              <button onclick="openApplyForm()" data-job-id="2">Apply</button>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="job-posting">
-              <h3>Full Stack Developer</h3>
-              <p><strong>Job Description:</strong> Proficient in frontend and backend technologies to build applications.</p>
-              <p><strong>Required Skills:</strong> React.js, Node.js, Express.js, MongoDB</p>
-              <button onclick="openApplyForm()" data-job-id="3">Apply</button>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="job-posting">
-              <h3>Full Stack Developer</h3>
-              <p><strong>Job Description:</strong> Proficient in frontend and backend technologies to build applications.</p>
-              <p><strong>Required Skills:</strong> React.js, Node.js, Express.js, MongoDB</p>
-              <button onclick="openApplyForm()" data-job-id="4">Apply</button>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="job-posting">
-              <h3>Full Stack Developer</h3>
-              <p><strong>Job Description:</strong> Proficient in frontend and backend technologies to build applications.</p>
-              <p><strong>Required Skills:</strong> React.js, Node.js, Express.js, MongoDB</p>
-              <button onclick="openApplyForm()" data-job-id="5">Apply</button>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="job-posting">
-              <h3>Full Stack Developer</h3>
-              <p><strong>Job Description:</strong> Proficient in frontend and backend technologies to build applications.</p>
-              <p><strong>Required Skills:</strong> React.js, Node.js, Express.js, MongoDB</p>
-              <button onclick="openApplyForm()" data-job-id="6">Apply</button>
-            </div>
-          </div>
-
+    <main class="main">
+      <div
+        class="page-title dark-background"
+        style="
+          background-image: url('assets/img/teamImage.jpg');
+          background-size: cover;
+          background-position: center;
+          padding: 100px 0;
+        "
+      >
+        <div class="container position-relative">
+          <h1>Your Future Starts Here – Be Part of Something Exciting!</h1>
         </div>
       </div>
-    </section>
 
-    <div id="apply-form-modal" class="apply-form-modal">
-      <div class="apply-form-modal-content">
-        <span class="close-btn" onclick="closeApplyForm()">&times;</span>
-        <h2>Apply for the Job</h2>
-        <form id="apply-form">
-          <div class="mb-3">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" class="form-control" required>
-          </div>
-          <div class="mb-3">
-            <label for="mobile">Mobile Number</label>
-            <input type="text" id="mobile" name="mobile" class="form-control" required>
-          </div>
-          <div class="mb-3">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" class="form-control" required>
-          </div>
-          <div class="mb-3">
-            <label for="resume">Resume Link (URL)</label>
-            <input type="url" id="resume" name="resume" class="form-control" placeholder="Enter the link to your resume" required>
-          </div>
-          
-          <input type="hidden" id="jobId" name="job_id">
+      <!-- Meet Our Team Section -->
+      <section id="meet-our-team" class="meet-our-team section py-5">
+        <div class="container">
+          <div class="row align-items-center">
+            <!-- Team Image -->
+            <div class="col-md-6 text-center">
+              <img
+                src="assets/img/team/team-1.jpg"
+                alt="Our Team"
+                class="img-fluid rounded shadow"
+              />
+            </div>
 
-          <div class="mb-3">
-            <button type="submit" class="btn btn-primary">Submit Application</button>
+            <!-- Team Content -->
+            <div class="col-md-6">
+              <h1 class="section-title">Meet Our Team</h1>
+              <p class="lead">
+                At <strong>Inofinitive SR</strong>, our team is the backbone of
+                everything we achieve. We are a dynamic group of professionals
+                with expertise in diverse fields, committed to delivering
+                excellence every step of the way.
+              </p>
+              <p>
+                Our culture emphasizes collaboration, innovation, and integrity.
+                We believe in fostering an environment where ideas thrive, and
+                every member feels valued and empowered. Together, we tackle
+                challenges, create solutions, and shape the future of our
+                industry.
+              </p>
+              <p>
+                With a shared vision of growth and success, our team continues
+                to set benchmarks, exceeding expectations and building lasting
+                relationships with clients and partners.
+              </p>
+              <ul>
+                <li>
+                  <strong>Our Mission:</strong> To empower businesses through
+                  innovative solutions.
+                </li>
+                <li>
+                  <strong>Our Vision:</strong> To be a global leader in
+                  providing exceptional technical and customer services.
+                </li>
+                <li>
+                  <strong>Core Values:</strong> Teamwork, Transparency,
+                  Creativity, and Excellence.
+                </li>
+              </ul>
+            </div>
           </div>
-        </form>
-      </div>
-    </div>
-  </main>
-  <footer id="footer" class="footer dark-background">
-    <div class="container">
-      <h3 class="sitename">Inofinitive SR</h3>
-      <p>Inofinitive SR specializes in delivering top-notch customer support, technical solutions, and telemarketing services. We focus on providing efficient, reliable, and customized services to help businesses enhance customer satisfaction and grow</p>
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://www.instagram.com/inofinitive?igsh=MTRmc3BkeGF2ems4Nw=="><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
-        <a href="https://x.com/inofinitiveSR"><i class="bi bi-twitter"></i></a>
+        </div>
+      </section>
 
-      </div>
-      <div class="container">
-        <div class="copyright">
-          <span> © 2024</span> <strong class="px-1 sitename">Inofinitive SR</strong> <span>All Rights Reserved</span>
+      <section id="job-listings" class="job-listings section">
+        <div class="container">
+          <div class="row gy-5">
+            <h1 style="text-align: center; font-weight: bold">
+              Open positions
+            </h1>
+            <div class="col-md-4">
+              <div class="job-posting">
+                <h3>Frontend Developer</h3>
+                <p>
+                  <strong>Job Description:</strong> Building and maintaining
+                  user interfaces using React.js.
+                </p>
+                <p>
+                  <strong>Required Skills:</strong> HTML, CSS, JavaScript,
+                  React.js, Git
+                </p>
+                <button onclick="openApplyForm()" data-job-id="1">Apply</button>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="job-posting">
+                <h3>Backend Developer</h3>
+                <p>
+                  <strong>Job Description:</strong> Work with Node.js and
+                  Express.js to build scalable backend services.
+                </p>
+                <p>
+                  <strong>Required Skills:</strong> Node.js, Express.js,
+                  MongoDB, APIs
+                </p>
+                <button onclick="openApplyForm()" data-job-id="2">Apply</button>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="job-posting">
+                <h3>Full Stack Developer</h3>
+                <p>
+                  <strong>Job Description:</strong> Proficient in frontend and
+                  backend technologies to build applications.
+                </p>
+                <p>
+                  <strong>Required Skills:</strong> React.js, Node.js,
+                  Express.js, MongoDB
+                </p>
+                <button onclick="openApplyForm()" data-job-id="3">Apply</button>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="job-posting">
+                <h3>Full Stack Developer</h3>
+                <p>
+                  <strong>Job Description:</strong> Proficient in frontend and
+                  backend technologies to build applications.
+                </p>
+                <p>
+                  <strong>Required Skills:</strong> React.js, Node.js,
+                  Express.js, MongoDB
+                </p>
+                <button onclick="openApplyForm()" data-job-id="4">Apply</button>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="job-posting">
+                <h3>Full Stack Developer</h3>
+                <p>
+                  <strong>Job Description:</strong> Proficient in frontend and
+                  backend technologies to build applications.
+                </p>
+                <p>
+                  <strong>Required Skills:</strong> React.js, Node.js,
+                  Express.js, MongoDB
+                </p>
+                <button onclick="openApplyForm()" data-job-id="5">Apply</button>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="job-posting">
+                <h3>Full Stack Developer</h3>
+                <p>
+                  <strong>Job Description:</strong> Proficient in frontend and
+                  backend technologies to build applications.
+                </p>
+                <p>
+                  <strong>Required Skills:</strong> React.js, Node.js,
+                  Express.js, MongoDB
+                </p>
+                <button onclick="openApplyForm()" data-job-id="6">Apply</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div id="apply-form-modal" class="apply-form-modal">
+        <div class="apply-form-modal-content">
+          <span class="close-btn" onclick="closeApplyForm()">&times;</span>
+          <h2>Apply for the Job</h2>
+          <form id="apply-form">
+            <div class="mb-3">
+              <label for="name">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="mobile">Mobile Number</label>
+              <input
+                type="text"
+                id="mobile"
+                name="mobile"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="resume">Resume Link (URL)</label>
+              <input
+                type="url"
+                id="resume"
+                name="resume"
+                class="form-control"
+                placeholder="Enter the link to your resume"
+                required
+              />
+            </div>
+
+            <input type="hidden" id="jobId" name="job_id" />
+
+            <div class="mb-3">
+              <button type="submit" class="btn btn-primary">
+                Submit Application
+              </button>
+            </div>
+          </form>
         </div>
       </div>
-    </div>
-  </footer>
-<!-- email js script -->
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-  (function() {
-    emailjs.init("DE7l6B5A8yl5l0LIH"); // Replace with your EmailJS public key
-    console.log("EMAIL IS HERE")
-  })();
+    </main>
+    <footer id="footer" class="footer dark-background">
+      <div class="container">
+        <h3 class="sitename">Inofinitive SR</h3>
+        <p>
+          Inofinitive SR specializes in delivering top-notch customer support,
+          technical solutions, and telemarketing services. We focus on providing
+          efficient, reliable, and customized services to help businesses
+          enhance customer satisfaction and grow
+        </p>
+        <div class="social-links d-flex justify-content-center">
+          <a
+            href="https://www.instagram.com/inofinitive?igsh=MTRmc3BkeGF2ems4Nw=="
+            ><i class="bi bi-instagram"></i
+          ></a>
+          <a href=""><i class="bi bi-linkedin"></i></a>
+          <a
+            href="https://www.facebook.com/inofinitivesrtechnologies?mibextid=ZbWKwL"
+            ><i class="bi bi-facebook"></i
+          ></a>
+          <a href="https://x.com/inofinitiveSR"
+            ><i class="bi bi-twitter"></i
+          ></a>
+        </div>
+        <div class="container">
+          <div class="copyright">
+            <span> © 2024</span>
+            <strong class="px-1 sitename">Inofinitive SR</strong>
+            <span>All Rights Reserved</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- email js script -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("DE7l6B5A8yl5l0LIH"); // Replace with your EmailJS public key
+        console.log("EMAIL IS HERE");
+      })();
 
-  document.querySelector("#apply-form").addEventListener("submit", function(event) {
-    event.preventDefault();
+      document
+        .querySelector("#apply-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
 
-    const form = event.target;
-    const formData = new FormData(form);
+          const form = event.target;
+          const formData = new FormData(form);
 
-    console.log(" EMAIL IS @ ",formData)
-    emailjs.sendForm("service_f5s2f3r", "template_67u4k0g", form)
-      .then(
-        function(response) {
-          console.log(" EMAIL IS abhi ",formData)
-          alert("Message sent successfully!");
-        },
-        function(error) {
-          console.log(" EMAIL IS error ",formData)
-          alert("Failed to send message. Please try again.");
-        }
-      );
-  });
-</script>
+          console.log(" EMAIL IS @ ", formData);
+          emailjs.sendForm("service_f5s2f3r", "template_67u4k0g", form).then(
+            function (response) {
+              console.log(" EMAIL IS abhi ", formData);
+              alert("Message sent successfully!");
+            },
+            function (error) {
+              console.log(" EMAIL IS error ", formData);
+              alert("Failed to send message. Please try again.");
+            }
+          );
+        });
+    </script>
 
-  
-     <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+    <!-- Preloader -->
+    <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-  <script>
-    function openApplyForm() {
-      document.getElementById('apply-form-modal').style.display = 'block';
-    }
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script>
+      function openApplyForm() {
+        document.getElementById("apply-form-modal").style.display = "block";
+      }
 
-    function closeApplyForm() {
-      document.getElementById('apply-form-modal').style.display = 'none';
-    }
-  </script>
-</body>
-
+      function closeApplyForm() {
+        document.getElementById("apply-form-modal").style.display = "none";
+      }
+    </script>
+  </body>
 </html>

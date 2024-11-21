@@ -1,213 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Blog - Inofinitive SR</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Blog - Inofinitive SR</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+    <!-- Favicons -->
+    <link href="assets/img/logo.jpg" rel="icon" />
+    <link href="assets/img/logo.jpg" rel="apple-touch-icon" />
 
-  <!-- Favicons -->
-  <link href="assets/img/logo.jpg" rel="icon">
-  <link href="assets/img/logo.jpg" rel="apple-touch-icon">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+    <!-- Additional Styles for Blogs -->
+    <style>
+      .blog-post-container {
+        margin-bottom: 30px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in-out;
+      }
 
-  <!-- Additional Styles for Blogs -->
-  <style>
-    .blog-post-container {
-      margin-bottom: 30px;
-      padding: 20px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      background-color: #fff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease-in-out;
-    }
+      .blog-post-container:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
 
-    .blog-post-container:hover {
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    }
+      .blog-post img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
 
-    .blog-post img {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
+      .blog-post h2 {
+        font-size: 1.8rem;
+        color: #333;
+        margin-top: 20px;
+      }
 
-    .blog-post h2 {
-      font-size: 1.8rem;
-      color: #333;
-      margin-top: 20px;
-    }
+      .blog-post p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #555;
+      }
 
-    .blog-post p {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #555;
-    }
+      .blog-post .post-meta {
+        font-size: 0.9rem;
+        color: #888;
+        margin-bottom: 10px;
+      }
 
-    .blog-post .post-meta {
-      font-size: 0.9rem;
-      color: #888;
-      margin-bottom: 10px;
-    }
+      .blog-post .post-meta i {
+        margin-right: 5px;
+      }
+    </style>
+  </head>
 
-    .blog-post .post-meta i {
-      margin-right: 5px;
-    }
-  </style>
+  <body class="blog-page">
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
+      >
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="assets/img/logo.jpg" alt="" />
+          <h1 class="sitename">Inofinitive SR</h1>
+        </a>
 
-</head>
-
-<body class="blog-page">
-
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.jpg" alt="">
-        <h1 class="sitename">Inofinitive SR</h1>
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="careers.html">Careers</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-    </div>
-  </header>
-
-  <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title dark-background">
-      <div class="container position-relative">
-        <h1>Latest Thoughts & Ideas</h1>
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
       </div>
-    </div><!-- End Page Title -->
+    </header>
 
-    <!-- Blog Section -->
-    <section id="blog" class="blog section">
-
-      <div class="container">
-
-        <div class="row gy-5">
-
-             <!-- Blog 3 -->
-          <div class="col-12">
-            <div class="blog-post-container">
-              <div class="blog-post">
-                <img src="assets/img/blog/blog ai.jpg" alt="Blog Image">
-                <h2 class="post-title">The Benefits of Telemarketing in Customer Engagement</h2>
-                <p class="post-meta"><i class="bi bi-person"></i> By Inofinitive SR | <i class="bi bi-calendar"></i> May 10, 2024</p>
-                <p class="post-content">
-                  Telemarketing has long been an effective strategy for businesses looking to engage with customers directly. Through phone calls, businesses can provide personalized services, build trust, and generate leads that can significantly impact growth.
-                  <br><br>
-                  At Inofinitive SR, we offer telemarketing services that go beyond just cold calling. We focus on creating meaningful interactions that foster long-term relationships with customers. By understanding their needs and offering solutions tailored to their preferences, we help businesses build a loyal customer base.
-                  <br><br>
-                  Our telemarketing approach is built on empathy, professionalism, and results. By utilizing data analytics and customer feedback, we can continually refine our strategies and improve the quality of interactions, leading to higher conversion rates and customer retention.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Blog 1 -->
-          <div class="col-12">
-            <div class="blog-post-container">
-              <div class="blog-post">
-                <img src="assets/img/blog/blog seo.jpg" alt="Blog Image">
-                <h2 class="post-title">Understanding the Importance of Customer Support</h2>
-                <p class="post-meta"><i class="bi bi-person"></i> By Inofinitive SR | <i class="bi bi-calendar"></i> March 15, 2024</p>
-                <p class="post-content">
-                  In today’s competitive business world, customer support plays a pivotal role in building long-lasting customer relationships. At Inofinitive SR, we strive to provide top-tier customer service that not only resolves issues but also enhances the customer experience.
-                  <br><br>
-                  Customer support can be the deciding factor in the success of a business. It ensures that clients receive the assistance they need, promptly and efficiently. With the rise of social media and review platforms, businesses can no longer afford to overlook the quality of their support. Effective communication, problem-solving skills, and a customer-first approach are the keys to maintaining customer satisfaction.
-                  <br><br>
-                  Our customer support team is available 24/7 to assist clients with any queries or issues they may encounter. We believe that through consistent training and adapting to new tools and technologies, we can continuously improve the support we offer.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Blog 2 -->
-          <div class="col-12">
-            <div class="blog-post-container">
-              <div class="blog-post">
-                <img src="assets/img/blog/blog cloud.jpg" alt="Blog Image">
-                <h2 class="post-title">The Role of Technology in Business Growth</h2>
-                <p class="post-meta"><i class="bi bi-person"></i> By Inofinitive SR | <i class="bi bi-calendar"></i> April 2, 2024</p>
-                <p class="post-content">
-                  Technology has revolutionized the way businesses operate, providing new opportunities for growth, efficiency, and innovation. From cloud computing to artificial intelligence, businesses now have access to tools that help streamline operations and improve decision-making.
-                  <br><br>
-                  At Inofinitive SR, we integrate advanced technologies into our services to ensure our clients stay ahead of the competition. By leveraging tools like customer relationship management (CRM) systems, data analytics, and automation, businesses can enhance their performance, improve customer experiences, and drive profitability.
-                  <br><br>
-                  As the business landscape continues to evolve, it’s crucial for companies to embrace digital transformation. By doing so, they can unlock new avenues for growth and stay competitive in an increasingly tech-driven market.
-                </p>
-              </div>
-            </div>
-          </div>
-
-         
-
-        </div>
-
-      </div>
-
-    </section><!-- End Blog Section -->
-
-  </main><!-- End Main -->
-
-  <footer id="footer" class="footer dark-background">
-    <div class="container">
-      <h3 class="sitename">Inofinitive SR</h3>
-      <p>Inofinitive SR specializes in delivering top-notch customer support, technical solutions, and telemarketing services. We focus on providing efficient, reliable, and customized services to help businesses enhance customer satisfaction and grow</p>
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://www.instagram.com/inofinitive?igsh=MTRmc3BkeGF2ems4Nw=="><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
-        <a href="https://x.com/inofinitiveSR"><i class="bi bi-twitter"></i></a>
-      </div>
-      <div class="container">
-        <div class="copyright">
-          <span>© 2024</span> <strong class="px-1 sitename">Inofinitive SR</strong> <span>All Rights Reserved</span>
+    <main class="main">
+      <!-- Page Title -->
+      <div class="page-title dark-background">
+        <div class="container position-relative">
+          <h1>Latest Thoughts & Ideas</h1>
         </div>
       </div>
-    </div>
-  </footer>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+      <!-- End Page Title -->
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+      <!-- Blog Section -->
+      <section id="blog" class="blog section">
+        <div class="container">
+          <div class="row gy-5">
+            <!-- Blog 3 -->
+            <div class="col-12">
+              <div class="blog-post-container">
+                <div class="blog-post">
+                  <img src="assets/img/blog/blog ai.jpg" alt="Blog Image" />
+                  <h2 class="post-title">
+                    The Benefits of Telemarketing in Customer Engagement
+                  </h2>
+                  <p class="post-meta">
+                    <i class="bi bi-person"></i> By Inofinitive SR |
+                    <i class="bi bi-calendar"></i> May 10, 2024
+                  </p>
+                  <p class="post-content">
+                    Telemarketing has long been an effective strategy for
+                    businesses looking to engage with customers directly.
+                    Through phone calls, businesses can provide personalized
+                    services, build trust, and generate leads that can
+                    significantly impact growth.
+                    <br /><br />
+                    At Inofinitive SR, we offer telemarketing services that go
+                    beyond just cold calling. We focus on creating meaningful
+                    interactions that foster long-term relationships with
+                    customers. By understanding their needs and offering
+                    solutions tailored to their preferences, we help businesses
+                    build a loyal customer base.
+                    <br /><br />
+                    Our telemarketing approach is built on empathy,
+                    professionalism, and results. By utilizing data analytics
+                    and customer feedback, we can continually refine our
+                    strategies and improve the quality of interactions, leading
+                    to higher conversion rates and customer retention.
+                  </p>
+                </div>
+              </div>
+            </div>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+            <!-- Blog 1 -->
+            <div class="col-12">
+              <div class="blog-post-container">
+                <div class="blog-post">
+                  <img src="assets/img/blog/blog seo.jpg" alt="Blog Image" />
+                  <h2 class="post-title">
+                    Understanding the Importance of Customer Support
+                  </h2>
+                  <p class="post-meta">
+                    <i class="bi bi-person"></i> By Inofinitive SR |
+                    <i class="bi bi-calendar"></i> March 15, 2024
+                  </p>
+                  <p class="post-content">
+                    In today’s competitive business world, customer support
+                    plays a pivotal role in building long-lasting customer
+                    relationships. At Inofinitive SR, we strive to provide
+                    top-tier customer service that not only resolves issues but
+                    also enhances the customer experience.
+                    <br /><br />
+                    Customer support can be the deciding factor in the success
+                    of a business. It ensures that clients receive the
+                    assistance they need, promptly and efficiently. With the
+                    rise of social media and review platforms, businesses can no
+                    longer afford to overlook the quality of their support.
+                    Effective communication, problem-solving skills, and a
+                    customer-first approach are the keys to maintaining customer
+                    satisfaction.
+                    <br /><br />
+                    Our customer support team is available 24/7 to assist
+                    clients with any queries or issues they may encounter. We
+                    believe that through consistent training and adapting to new
+                    tools and technologies, we can continuously improve the
+                    support we offer.
+                  </p>
+                </div>
+              </div>
+            </div>
 
-</body>
+            <!-- Blog 2 -->
+            <div class="col-12">
+              <div class="blog-post-container">
+                <div class="blog-post">
+                  <img src="assets/img/blog/blog cloud.jpg" alt="Blog Image" />
+                  <h2 class="post-title">
+                    The Role of Technology in Business Growth
+                  </h2>
+                  <p class="post-meta">
+                    <i class="bi bi-person"></i> By Inofinitive SR |
+                    <i class="bi bi-calendar"></i> April 2, 2024
+                  </p>
+                  <p class="post-content">
+                    Technology has revolutionized the way businesses operate,
+                    providing new opportunities for growth, efficiency, and
+                    innovation. From cloud computing to artificial intelligence,
+                    businesses now have access to tools that help streamline
+                    operations and improve decision-making.
+                    <br /><br />
+                    At Inofinitive SR, we integrate advanced technologies into
+                    our services to ensure our clients stay ahead of the
+                    competition. By leveraging tools like customer relationship
+                    management (CRM) systems, data analytics, and automation,
+                    businesses can enhance their performance, improve customer
+                    experiences, and drive profitability.
+                    <br /><br />
+                    As the business landscape continues to evolve, it’s crucial
+                    for companies to embrace digital transformation. By doing
+                    so, they can unlock new avenues for growth and stay
+                    competitive in an increasingly tech-driven market.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Blog Section -->
+    </main>
+    <!-- End Main -->
 
+    <footer id="footer" class="footer dark-background">
+      <div class="container">
+        <h3 class="sitename">Inofinitive SR</h3>
+        <p>
+          Inofinitive SR specializes in delivering top-notch customer support,
+          technical solutions, and telemarketing services. We focus on providing
+          efficient, reliable, and customized services to help businesses
+          enhance customer satisfaction and grow
+        </p>
+        <div class="social-links d-flex justify-content-center">
+          <a
+            href="https://www.instagram.com/inofinitive?igsh=MTRmc3BkeGF2ems4Nw=="
+            ><i class="bi bi-instagram"></i
+          ></a>
+          <a href=""><i class="bi bi-linkedin"></i></a>
+          <a
+            href="https://www.facebook.com/inofinitivesrtechnologies?mibextid=ZbWKwL"
+            ><i class="bi bi-facebook"></i
+          ></a>
+          <a href="https://x.com/inofinitiveSR"
+            ><i class="bi bi-twitter"></i
+          ></a>
+        </div>
+        <div class="container">
+          <div class="copyright">
+            <span>© 2024</span>
+            <strong class="px-1 sitename">Inofinitive SR</strong>
+            <span>All Rights Reserved</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>

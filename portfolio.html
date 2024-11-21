@@ -1,235 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Portfolio - Inofinitive SR</title>
+    <meta
+      name="description"
+      content="Inofinitive SR - Providing all kinds of software services."
+    />
+    <meta
+      name="keywords"
+      content="Software Services, Web Development, App Development, IT Solutions"
+    />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Inofinitive SR Portfolio</title>
-  <meta name="description" content="Inofinitive SR - Providing all kinds of software services.">
-  <meta name="keywords" content="Software Services, Web Development, App Development, IT Solutions">
+    <!-- Favicons -->
+    <link href="assets/img/logo.jpg" rel="icon" />
+    <link href="assets/img/logo.jpg" rel="apple-touch-icon" />
 
-  <!-- Favicons -->
-  <link href="assets/img/logo.jpg" rel="icon">
-  <link href="assets/img/logo.jpg" rel="apple-touch-icon">
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+    <style>
+      .portfolio-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
 
-  <style>
-    .portfolio-image {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
+      .service-box {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s;
+      }
 
-    .service-box {
-      background: #f8f9fa;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      transition: transform 0.3s;
-    }
+      .service-box:hover {
+        transform: scale(1.05);
+      }
 
-    .service-box:hover {
-      transform: scale(1.05);
-    }
+      .service-icon {
+        font-size: 2rem;
+        color: #007bff;
+      }
 
-    .service-icon {
-      font-size: 2rem;
-      color: #007bff;
-    }
+      .service-box h4 {
+        margin-top: 10px;
+        font-size: 1.25rem;
+      }
 
-    .service-box h4 {
-      margin-top: 10px;
-      font-size: 1.25rem;
-    }
+      .service-box p {
+        margin-top: 5px;
+        font-size: 0.9rem;
+        color: #6c757d;
+      }
 
-    .service-box p {
-      margin-top: 5px;
-      font-size: 0.9rem;
-      color: #6c757d;
-    }
+      .achievements-item {
+        margin-bottom: 20px;
+      }
 
-    .achievements-item {
-      margin-bottom: 20px;
-    }
+      .team-member img {
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+      }
 
-    .team-member img {
-      border-radius: 50%;
-      width: 120px;
-      height: 120px;
-      object-fit: cover;
-    }
+      .team-member {
+        text-align: center;
+        padding: 10px;
+      }
 
-    .team-member {
-      text-align: center;
-      padding: 10px;
-    }
+      .team-member h5 {
+        margin-top: 10px;
+        font-weight: 600;
+      }
+    </style>
+  </head>
 
-    .team-member h5 {
-      margin-top: 10px;
-      font-weight: 600;
-    }
-  </style>
-</head>
-
-<body class="portfolio-page">
-
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.jpg" alt="">
-        <h1 class="sitename">Inofinitive SR</h1>
-      </a>
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html#hero">Home</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="careers.html">Careers</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-    </div>
-  </header>
-
-  <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title dark-background" >
-      <div class="container position-relative">
-        <h1>Know Our Journey</h1>
+  <body class="portfolio-page">
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="container-fluid container-xl d-flex align-items-center justify-content-between"
+      >
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="assets/img/logo.jpg" alt="" />
+          <h1 class="sitename">Inofinitive SR</h1>
+        </a>
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html#hero">Home</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
       </div>
-    </div>
+    </header>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section py-5">
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/working-2.jpg" alt="Inofinitive SR Project" class="portfolio-image">
-          </div>
-          <div class="col-lg-6">
-            <h2>About Our Work</h2>
-            <p>At Inofinitive SR, we deliver cutting-edge software solutions tailored to meet the unique needs of our clients. Our portfolio showcases projects across industries including healthcare, e-commerce, and education.</p>
-            <ul>
-              <li><strong>Web Development:</strong> Scalable and responsive websites for businesses.</li>
-              <li><strong>Mobile Apps:</strong> Intuitive and engaging mobile applications.</li>
-              <li><strong>IT Solutions:</strong> Reliable IT services and support.</li>
-            </ul>
-          </div>
+    <main class="main">
+      <!-- Page Title -->
+      <div class="page-title dark-background">
+        <div class="container position-relative">
+          <h1>Know Our Journey</h1>
         </div>
       </div>
-    </section>
 
-    <!-- Founded Year & Achievements Section -->
-    <section id="achievements" class="achievements section py-5">
-      <div class="container">
-        <h2 class="text-center">Our Journey & Achievements</h2>
-        <div class="row gy-4">
-          <div class="col-md-6">
-            <h4>Founded Year</h4>
-            <p>Inofinitive SR was founded in <strong>2015</strong> with a vision to provide innovative and high-quality software solutions. Since then, we have served numerous clients across various sectors and have grown into a trusted partner in the IT services industry.</p>
-          </div>
-          <div class="col-md-6">
-            <h4>Key Achievements</h4>
-            <ul>
-              <li class="achievements-item"><strong>2016:</strong> Launched our first major web application for the healthcare sector.</li>
-              <li class="achievements-item"><strong>2018:</strong> Expanded to mobile app development with over 100,000 downloads on the Play Store.</li>
-              <li class="achievements-item"><strong>2020:</strong> Established a team of over 50 professionals specializing in cloud solutions.</li>
-              <li class="achievements-item"><strong>2023:</strong> Recognized as one of the top IT solutions providers in the region.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Our Team Section -->
-    <section id="team" class="team section py-5 bg-light">
-      <div class="container">
-        <h2 class="text-center">Meet Our Team</h2>
-        <div class="row gy-4">
-          <div class="col-md-4">
-            <div class="team-member">
-              <img src="assets/img/team/team-4.jpg" alt="Team Member 1">
-              <h5>John Doe</h5>
-              <p>Founder & CEO</p>
+      <!-- Portfolio Section -->
+      <section id="portfolio" class="portfolio section py-5">
+        <div class="container">
+          <div class="row gy-4">
+            <div
+              class="col-lg-6 d-flex align-items-center justify-content-center"
+            >
+              <img
+                src="assets/img/working-2.jpg"
+                alt="Inofinitive SR Project"
+                class="portfolio-image"
+              />
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="team-member">
-              <img src="assets/img/team/team-3.jpg" alt="Team Member 2">
-              <h5>Jane Smith</h5>
-              <p>Lead Developer</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="team-member">
-              <img src="assets/img/team/team-2.jpg" alt="Team Member 3">
-              <h5>Michael Brown</h5>
-              <p>Head of Marketing</p>
+            <div class="col-lg-6">
+              <h2>About Our Work</h2>
+              <p>
+                At Inofinitive SR, we deliver cutting-edge software solutions
+                tailored to meet the unique needs of our clients. Our portfolio
+                showcases projects across industries including healthcare,
+                e-commerce, and education.
+              </p>
+              <ul>
+                <li>
+                  <strong>Web Development:</strong> Scalable and responsive
+                  websites for businesses.
+                </li>
+                <li>
+                  <strong>Mobile Apps:</strong> Intuitive and engaging mobile
+                  applications.
+                </li>
+                <li>
+                  <strong>IT Solutions:</strong> Reliable IT services and
+                  support.
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="gallery" class="gallery py-5 bg-light">
-      <div class="container">
-        <h2 class="text-center mb-4">Gallery</h2>
-        <div class="row gy-4">
-          <div class="col-md-4">
-            <img src="assets/img/working-2.jpg" alt="Portfolio Image 1" class="img-fluid">
-          </div>
-          <div class="col-md-4">
-            <img src="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" alt="Portfolio Image 2" class="img-fluid">
-          </div>
-          <div class="col-md-4">
-            <img src="assets/img/working-4.jpg" alt="Portfolio Image 3" class="img-fluid">
+      <!-- Founded Year & Achievements Section -->
+      <section id="achievements" class="achievements section py-5">
+        <div class="container">
+          <h2 class="text-center">Our Journey & Achievements</h2>
+          <div class="row gy-4">
+            <div class="col-md-6">
+              <h4>Founded Year</h4>
+              <p>
+                Inofinitive SR was founded in <strong>2015</strong> with a
+                vision to provide innovative and high-quality software
+                solutions. Since then, we have served numerous clients across
+                various sectors and have grown into a trusted partner in the IT
+                services industry.
+              </p>
+            </div>
+            <div class="col-md-6">
+              <h4>Key Achievements</h4>
+              <ul>
+                <li class="achievements-item">
+                  <strong>2016:</strong> Launched our first major web
+                  application for the healthcare sector.
+                </li>
+                <li class="achievements-item">
+                  <strong>2018:</strong> Expanded to mobile app development with
+                  over 100,000 downloads on the Play Store.
+                </li>
+                <li class="achievements-item">
+                  <strong>2020:</strong> Established a team of over 50
+                  professionals specializing in cloud solutions.
+                </li>
+                <li class="achievements-item">
+                  <strong>2023:</strong> Recognized as one of the top IT
+                  solutions providers in the region.
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
+      </section>
+
+      <!-- Our Team Section -->
+      <section id="team" class="team section py-5 bg-light">
+        <div class="container">
+          <h2 class="text-center">Meet Our Team</h2>
+          <div class="row gy-4">
+            <div class="col-md-4">
+              <div class="team-member">
+                <img src="assets/img/team/team-4.jpg" alt="Team Member 1" />
+                <h5>John Doe</h5>
+                <p>Founder & CEO</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="team-member">
+                <img src="assets/img/team/team-3.jpg" alt="Team Member 2" />
+                <h5>Jane Smith</h5>
+                <p>Lead Developer</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="team-member">
+                <img src="assets/img/team/team-2.jpg" alt="Team Member 3" />
+                <h5>Michael Brown</h5>
+                <p>Head of Marketing</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="gallery py-5 bg-light">
+        <div class="container">
+          <h2 class="text-center mb-4">Gallery</h2>
+          <div class="row gy-4">
+            <div class="col-md-4">
+              <img
+                src="assets/img/working-2.jpg"
+                alt="Portfolio Image 1"
+                class="img-fluid"
+              />
+            </div>
+            <div class="col-md-4">
+              <img
+                src="assets/img/masonry-portfolio/masonry-portfolio-1.jpg"
+                alt="Portfolio Image 2"
+                class="img-fluid"
+              />
+            </div>
+            <div class="col-md-4">
+              <img
+                src="assets/img/working-4.jpg"
+                alt="Portfolio Image 3"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer" class="footer dark-background text-center py-4">
+      <div class="container">
+        <h3 class="sitename">Inofinitive SR</h3>
+        <p>
+          Your partner in delivering innovative software solutions. Let's build
+          something amazing together!
+        </p>
+        <div class="social-links d-flex justify-content-center">
+          <a
+            href="https://www.instagram.com/inofinitive?igsh=MTRmc3BkeGF2ems4Nw=="
+            ><i class="bi bi-instagram"></i
+          ></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+          <a href="https://x.com/inofinitiveSR"
+            ><i class="bi bi-twitter"></i
+          ></a>
+        </div>
+        <p>&copy; 2024 <strong>Inofinitive SR</strong>. All Rights Reserved.</p>
       </div>
-    </section>
+    </footer>
 
-  </main>
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
 
-  <footer id="footer" class="footer dark-background text-center py-4">
-    <div class="container">
-      <h3 class="sitename">Inofinitive SR</h3>
-      <p>Your partner in delivering innovative software solutions. Let's build something amazing together!</p>
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://www.instagram.com/inofinitive?igsh=MTRmc3BkeGF2ems4Nw=="><i class="bi bi-instagram"></i></a>
-        <a href="#"><i class="bi bi-linkedin"></i></a>
-        <a href="https://x.com/inofinitiveSR"><i class="bi bi-twitter"></i></a>
-
-      </div>
-      <p>&copy; 2024 <strong>Inofinitive SR</strong>. All Rights Reserved.</p>
-    </div>
-  </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script>
-    AOS.init();
-  </script>
-
-</body>
-
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
