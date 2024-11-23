@@ -886,79 +886,6 @@
 }
 
    </style>
-
-
-<!-- Chat ICON -->
-
-<style>
-
-  /* Chat icon styling */
-  #chat-icon {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
-    background-color: #ffcc00;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    transition: transform 0.3s ease;
-  }
-
-  #chat-icon i {
-    font-size: 30px;
-    color: #fff;
-  }
-
-  /* Hidden state for the contact options */
-  .contact-options {
-    position: fixed;
-    bottom: 100px;
-    right: 30px;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    z-index: 999;
-  }
-
-  .contact-options a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #ffcc00;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-    text-decoration: none;
-    color: #fff;
-    font-size: 20px;
-    transition: transform 0.3s ease;
-  }
-
-  .contact-options a:hover {
-    transform: scale(1.2);
-  }
-
-  .contact-options .close-btn {
-    font-size: 30px;
-    color: #fff;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-  }
-
-  /* Animation for opening contact options */
-  .open .contact-options {
-    display: flex;
-  }
-</style>
   
 
 
@@ -1529,40 +1456,8 @@
   </footer>
   
   <!-- Scroll Top -->
-  <!-- <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <div id="chat-icon" onclick="toggleChatOptions()">
-    <i class="bi bi-chat"></i> <!-- Chat icon (can be replaced with your own) -->
-  </div>
-
-  <!-- Contact Options -->
-  <div id="contact-options" class="contact-options">
-    <!-- Close Button -->
-    <button class="close-btn" onclick="toggleChatOptions()">×</button>
-
-    <!-- Call Icon -->
-    <a href="tel:+1234567890" title="Call Us">
-      <i class="bi bi-telephone"></i>
-    </a>
-
-    <!-- WhatsApp Icon -->
-    <a href="https://wa.me/11234567890" target="_blank" title="WhatsApp">
-      <i class="bi bi-whatsapp"></i>
-    </a>
-
-    <!-- Mail Icon -->
-    <a href="mailto:info@example.com" title="Email Us">
-      <i class="bi bi-envelope"></i>
-    </a>
-  </div>
-
-  <script>
-    // Function to toggle chat options
-    function toggleChatOptions() {
-      const contactOptions = document.getElementById('contact-options');
-      contactOptions.classList.toggle('open');
-    }
-  </script>
   <!-- Preloader -->
   <div id="preloader"></div>
 
