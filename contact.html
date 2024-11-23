@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Inofinitive SR</title>
+
+    <!-- Favicons -->
+    <link href="assets/img/logo.jpg" rel="icon">
+    <link href="assets/img/logo.jpg" rel="apple-touch-icon">
+  
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+  
+    <!-- Styles -->
+    <style>
+        /* Global Styles */
+        body {
+          background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
+          color: #ffffff;
+          font-family: "Poppins", sans-serif;
+        }
+      
+        h2,
+        h4 {
+          color: #f5f5f5;
+          font-weight: 700;
+          text-transform: uppercase;
+          text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+      
+        a {
+          color: #f5f5f5;
+          text-decoration: none;
+          font-weight: bold;
+        }
+      
+        a:hover {
+          color: #cccccc;
+        }
+      
+        /* Contact Section */
+        #contact {
+          padding: 60px 20px;
+        }
+      
+        .contact-container {
+          background: linear-gradient(145deg, #252525, #1f1f1f);
+          border-radius: 15px;
+          padding: 40px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+          animation: fadeIn 1.5s ease;
+        }
+      
+        .info-box {
+          padding: 20px;
+          margin-bottom: 30px;
+          background: #1f1f1f;
+          border-radius: 10px;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+          transition: transform 0.3s, background-color 0.3s;
+        }
+      
+        .info-box:hover {
+          transform: scale(1.05);
+          background-color: #2a2a2a;
+        }
+      
+        .info-box i {
+          font-size: 28px;
+          color: #f5f5f5;
+          margin-right: 15px;
+        }
+      
+        /* Enhanced Input Styles */
+        form .form-control {
+          background: #2a2a2a;
+          border: 1px solid #444444;
+          color: #ffffff;
+          border-radius: 8px;
+          padding: 10px 15px;
+          margin-bottom: 20px;
+          transition: box-shadow 0.3s, border-color 0.3s;
+        }
+      
+        form .form-control:focus {
+          box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+          border-color: #f5f5f5;
+        }
+      
+        form .form-control::placeholder {
+          color: #aaaaaa;
+          font-style: italic;
+        }
+      
+        form button {
+          background: #ffffff;
+          color: #000000;
+          font-weight: bold;
+          border: none;
+          border-radius: 8px;
+          padding: 10px 20px;
+          transition: all 0.3s ease-in-out;
+        }
+      
+        form button:hover {
+          background: #cccccc;
+          color: #000000;
+          box-shadow: 0 4px 15px rgba(255, 255, 255, 0.5);
+        }
+      
+        /* Animations */
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      
+        /* Responsive */
+        @media (max-width: 768px) {
+          #contact {
+            padding: 40px 15px;
+          }
+      
+          .info-box {
+            text-align: center;
+          }
+      
+          .info-box i {
+            margin-bottom: 10px;
+          }
+        }
+      </style>
+      
+      
+  </head>
+
+  <body>
+    <!-- Header Section  -->
+    <header id="header" class="header d-flex align-items-center fixed-top" style="background: linear-gradient(145deg, #121212, #292929);">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+    
+          <a href="index.html" class="logo d-flex align-items-center">
+            <img src="assets/img/logo.jpg" alt="">
+            <h1 class="sitename">Inofinitive SR</h1>
+          </a>
+    
+          <nav id="navmenu" class="navmenu">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="service-details.html">Services</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          </nav>
+    
+        </div>
+      </header>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="text-center">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p style="color: #f5f5f5;">We’re here to help and answer any questions you might have.</p>
+
+        <div class="row contact-container">
+          <!-- Contact Info -->
+          <div class="col-lg-6">
+            <div class="info-box">
+              <i class="bi bi-geo-alt"></i>
+              <h4>Location</h4>
+              <p style="color: #f5f5f5;">1234 Street Name, Hyderabad, India</p>
+            </div>
+            <div class="info-box">
+              <i class="bi bi-envelope"></i>
+              <h4>Email</h4>
+              <p style="color: #f5f5f5;">info@example.com</p>
+            </div>
+            <div class="info-box">
+              <i class="bi bi-phone"></i>
+              <h4>Call</h4>
+              <p style="color: #f5f5f5;">+91 123 456 7890</p>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="col-lg-6">
+            <form action="#" method="post" class="mt-3">
+              <div class="mb-3">
+                <input type="text" class="form-control" name="name" placeholder="Your Name" required />
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control" name="email" placeholder="Your Email" required />
+              </div>
+              <div class="mb-3">
+                <input type="number" class="form-control" name="mobile" placeholder="Your Mobile" required />
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control" name="subject" placeholder="Subject" required />
+              </div>
+              <div class="mb-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Your Message" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer section  -->
+    <footer id="footer" style="background: linear-gradient(145deg, #121212, #292929); padding: 80px 20px; color: #ffffff; font-family: 'Poppins', sans-serif;">
+        <div class="container d-flex flex-column flex-lg-row justify-content-between align-items-center text-center text-lg-start">
+          <!-- Section 1: Logo and Social Media Icons -->
+          <div class="footer-section text-center mb-4 mb-lg-0">
+            <img src="assets/img/logo.jpg" alt="Inofinitive SR Logo" style="width: 200px; border-radius: 50%; box-shadow: 0 8px 20px rgba(255, 204, 0, 0.7); margin-bottom: 25px;">
+            <div class="social-links d-flex justify-content-center">
+              <a href="https://www.instagram.com/inofinitive?igsh=MTRmc3BkeGF2ems4Nw==" class="me-3" style="transition: transform 0.3s;">
+                <img src="assets/img/instagram.svg" alt="Instagram" style="width: 35px;">
+              </a>
+              <a href="https://www.linkedin.com/in/inofinitive-sr-technologies-2024mbnr-it-hub?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="me-3" style="transition: transform 0.3s;">
+                <img src="assets/img/linkedin.svg" alt="LinkedIn" style="width: 35px;">
+              </a>
+              <a href="https://x.com/inofinitiveSR" class="me-3" style="transition: transform 0.3s;">
+                <img src="assets/img/x.svg" alt="Twitter" style="width: 35px;">
+              </a>
+              <a href="https://www.facebook.com/inofinitivesrtechnologies?mibextid=ZbWKwL" style="transition: transform 0.3s;">
+                <img src="assets/img/facebook.svg" alt="Facebook" style="width: 35px;">
+              </a>
+            </div>
+          </div>
+      
+          <!-- Section 2: Quick Links -->
+          <div class="footer-section">
+            <h5 style="font-size: 26px; font-weight: bold; color: #ffcc00; margin-bottom: 20px; text-transform: uppercase;">Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="#home" style="font-size: 20px; color: #ffffff; text-decoration: none; margin-bottom: 10px; display: block;">Home</a></li>
+              <li><a href="#about" style="font-size: 20px; color: #ffffff; text-decoration: none; margin-bottom: 10px; display: block;">About Us</a></li>
+              <li><a href="#services" style="font-size: 20px; color: #ffffff; text-decoration: none; margin-bottom: 10px; display: block;">Services</a></li>
+              <li><a href="#contact" style="font-size: 20px; color: #ffffff; text-decoration: none;">Contact</a></li>
+            </ul>
+          </div>
+      
+          <!-- Section 3: Contact Details -->
+          <div class="footer-section text-center text-lg-start">
+            <h5 style="font-size: 26px; font-weight: bold; color: #ffcc00; margin-bottom: 20px; text-transform: uppercase;">Contact Us</h5>
+            <p style="font-size: 20px; margin-bottom: 10px;">Email: <a href="mailto:info@inofinitive.com" style="color: #ffffff; text-decoration: none; font-weight: 500;">info@inofinitive.com</a></p>
+            <p style="font-size: 20px;">Phone: <a href="tel:+7416305104" style="color: #ffffff; text-decoration: none; font-weight: 500;">+91-7416305104</a></p>
+          </div>
+        </div>
+      
+        <!-- Footer Bottom -->
+        <div class="container text-center mt-5">
+          <hr style="border-color: rgba(255, 255, 255, 0.2);">
+          <p style="font-size: 18px; color: #cccccc;">© 2024 <strong style="color: #ffcc00; font-size: 20px;">Inofinitive SR</strong>. All Rights Reserved.</p>
+        </div>
+      </footer>
+
+      <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+      
+</body>
+</html>

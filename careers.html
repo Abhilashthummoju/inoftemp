@@ -38,123 +38,190 @@
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
     <style>
-      .job-listings .job-posting {
-        background: #f8f9fa;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        transition: transform 0.3s, box-shadow 0.3s;
-        height: 100%;
-      }
+      .job-posting {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
 
-      .job-listings .job-posting:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      }
+  .job-posting:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  }
 
-      .job-listings .job-posting h3 {
-        color: #333;
-        font-weight: 600;
-      }
+  .job-posting::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
 
-      .job-listings .job-posting p {
-        color: #555;
-        margin: 10px 0;
-      }
+  .job-posting:hover::before {
+    opacity: 1;
+  }
 
-      .job-listings .job-posting button {
-        background-color: #007bff;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 4px;
-        transition: background-color 0.3s;
-      }
+  .job-posting h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #f0f0f0;
+  }
 
-      .job-listings .job-posting button:hover {
-        background-color: #0056b3;
-      }
+  .job-posting p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #dcdcdc;
+  }
 
-      .apply-form-modal {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.6);
-        z-index: 1000;
-      }
+  .job-posting button {
+    background: #ff7f50;
+    border: none;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
 
-      .apply-form-modal-content {
-        background: #fff;
-        border-radius: 8px;
-        padding: 20px;
-        max-width: 500px;
-        margin: 100px auto;
-        position: relative;
-      }
+  .job-posting button:hover {
+    background: #ff4500;
+    transform: translateY(-3px);
+  }
+    .job-listings .job-posting {
+  background: linear-gradient(135deg, #f0f4f8 30%, #d6dee1);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 100%;
+  background-size: 400% 400%;
+  animation: shine 3s infinite;
+}
 
-      .apply-form-modal-content .close-btn {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: 24px;
-        color: #333;
-        cursor: pointer;
-      }
+.job-listings .job-posting:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-position: 100% 100%;
+}
 
-      @media (max-width: 768px) {
-        .job-listings .job-posting {
-          margin-bottom: 20px;
-        }
-      }
+.job-listings .job-posting h3 {
+  color: #333;
+  font-weight: 600;
+}
 
-      /* Meet Our Team Section */
-      .meet-our-team {
-        background-color: #f9f9f9;
-        padding: 60px 0;
-      }
+.job-listings .job-posting p {
+  color: #555;
+  margin: 10px 0;
+}
 
-      .meet-our-team .section-title {
-        font-size: 28px;
-        font-weight: 700;
-        margin-bottom: 20px;
-      }
+.job-listings .job-posting button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
 
-      .meet-our-team p {
-        font-size: 16px;
-        line-height: 1.8;
-        color: #555;
-      }
+.job-listings .job-posting button:hover {
+  background-color: #0056b3;
+}
 
-      .meet-our-team ul {
-        list-style: none;
-        padding: 0;
-      }
+.apply-form-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
 
-      .meet-our-team ul li {
-        font-size: 16px;
-        color: #555;
-        margin-bottom: 10px;
-      }
+.apply-form-modal-content {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 100px auto;
+  position: relative;
+}
 
-      .meet-our-team ul li::before {
-        content: "✔";
-        color: #007bff;
-        margin-right: 10px;
-      }
+.apply-form-modal-content .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+}
 
-      .meet-our-team img {
-        max-width: 100%;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-    </style>
+@media (max-width: 768px) {
+  .job-listings .job-posting {
+    margin-bottom: 20px;
+  }
+}
+
+.apply-form-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.apply-form-modal-content {
+  width: 50%;
+  padding: 20px;
+  background: #2c2c2c;
+  border-radius: 10px;
+  color: white;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Shine Animation */
+@keyframes shine {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+  </style>    
   </head>
 
   <body class="service-details-page">
-    <header id="header" class="header d-flex align-items-center fixed-top">
+    <header id="header" class="header d-flex align-items-center fixed-top" style="background: linear-gradient(145deg, #121212, #292929);">
       <div
         class="container-fluid container-xl d-flex align-items-center justify-content-between"
       >
@@ -191,202 +258,151 @@
         </div>
       </div>
 
-      <!-- Meet Our Team Section -->
-      <section id="meet-our-team" class="meet-our-team section py-5">
+      <section id="job-listings" class="job-listings section" style="background-color: #f4f4f4; color: #333; padding: 40px; border-radius: 10px;">
         <div class="container">
-          <div class="row align-items-center">
-            <!-- Team Image -->
-            <div class="col-md-6 text-center">
-              <img
-                src="assets/img/team/team-1.jpg"
-                alt="Our Team"
-                class="img-fluid rounded shadow"
-              />
-            </div>
-
-            <!-- Team Content -->
-            <div class="col-md-6">
-              <h1 class="section-title">Meet Our Team</h1>
-              <p class="lead">
-                At <strong>Inofinitive SR</strong>, our team is the backbone of
-                everything we achieve. We are a dynamic group of professionals
-                with expertise in diverse fields, committed to delivering
-                excellence every step of the way.
-              </p>
-              <p>
-                Our culture emphasizes collaboration, innovation, and integrity.
-                We believe in fostering an environment where ideas thrive, and
-                every member feels valued and empowered. Together, we tackle
-                challenges, create solutions, and shape the future of our
-                industry.
-              </p>
-              <p>
-                With a shared vision of growth and success, our team continues
-                to set benchmarks, exceeding expectations and building lasting
-                relationships with clients and partners.
-              </p>
-              <ul>
-                <li>
-                  <strong>Our Mission:</strong> To empower businesses through
-                  innovative solutions.
-                </li>
-                <li>
-                  <strong>Our Vision:</strong> To be a global leader in
-                  providing exceptional technical and customer services.
-                </li>
-                <li>
-                  <strong>Core Values:</strong> Teamwork, Transparency,
-                  Creativity, and Excellence.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="job-listings" class="job-listings section">
-        <div class="container">
+          <h1 class="text-center" style="font-family: 'Arial', sans-serif; color: #1d3557; margin-bottom: 40px;">Open Positions</h1>
           <div class="row gy-5">
-            <h1 style="text-align: center; font-weight: bold">
-              Open positions
-            </h1>
-            <div class="col-md-4">
-              <div class="job-posting">
-                <h3>Frontend Developer</h3>
-                <p>
-                  <strong>Job Description:</strong> Building and maintaining
-                  user interfaces using React.js.
-                </p>
-                <p>
-                  <strong>Required Skills:</strong> HTML, CSS, JavaScript,
-                  React.js, Git
-                </p>
-                <button onclick="openApplyForm()" data-job-id="1">Apply</button>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="job-posting">
-                <h3>Backend Developer</h3>
-                <p>
-                  <strong>Job Description:</strong> Work with Node.js and
-                  Express.js to build scalable backend services.
-                </p>
-                <p>
-                  <strong>Required Skills:</strong> Node.js, Express.js,
-                  MongoDB, APIs
-                </p>
-                <button onclick="openApplyForm()" data-job-id="2">Apply</button>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="job-posting">
-                <h3>Full Stack Developer</h3>
-                <p>
-                  <strong>Job Description:</strong> Proficient in frontend and
-                  backend technologies to build applications.
-                </p>
-                <p>
-                  <strong>Required Skills:</strong> React.js, Node.js,
-                  Express.js, MongoDB
-                </p>
-                <button onclick="openApplyForm()" data-job-id="3">Apply</button>
+            <!-- Job Postings -->
+            <div class="col-md-12">
+              <div class="job-listings-container" style="width: 100%; margin: 0 auto;">
+                <!-- Frontend Developer -->
+                <div class="job-posting" onclick="openApplyForm(1, 'Frontend Developer', 'Building and maintaining user interfaces using React.js. Skills required: HTML, CSS, JavaScript, React.js, Git. Experience: 2+ years in front-end development.')" style="background: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+                  <h3 style="font-family: 'Arial', sans-serif; color: #1d3557;">Frontend Developer</h3>
+                  <p><strong>Job Description:</strong> Building and maintaining user interfaces using React.js.</p>
+                  <p><strong>Required Skills:</strong> HTML, CSS, JavaScript, React.js, Git</p>
+                  <p><strong>Experience:</strong> 2+ years in front-end development.</p>
+                  <button onclick="openApplyForm(1, 'Frontend Developer', 'Building and maintaining user interfaces using React.js. Skills required: HTML, CSS, JavaScript, React.js, Git. Experience: 2+ years in front-end development.')" style="background-color: #1d3557; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Apply</button>
+                </div>
+      
+                <!-- Backend Developer -->
+                <div class="job-posting" onclick="openApplyForm(2, 'Backend Developer', 'Work with Node.js and Express.js to build scalable backend services. Skills required: Node.js, Express.js, MongoDB, APIs. Experience: 3+ years in backend development.')" style="background: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+                  <h3 style="font-family: 'Arial', sans-serif; color: #1d3557;">Backend Developer</h3>
+                  <p><strong>Job Description:</strong> Work with Node.js and Express.js to build scalable backend services.</p>
+                  <p><strong>Required Skills:</strong> Node.js, Express.js, MongoDB, APIs</p>
+                  <p><strong>Experience:</strong> 3+ years in backend development.</p>
+                  <button onclick="openApplyForm(2, 'Backend Developer', 'Work with Node.js and Express.js to build scalable backend services. Skills required: Node.js, Express.js, MongoDB, APIs. Experience: 3+ years in backend development.')" style="background-color: #1d3557; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Apply</button>
+                </div>
+      
+                <!-- Full Stack Developer -->
+                <div class="job-posting" onclick="openApplyForm(3, 'Full Stack Developer', 'Proficient in frontend and backend technologies to build applications. Skills required: React.js, Node.js, Express.js, MongoDB. Experience: 4+ years in full-stack development.')" style="background: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+                  <h3 style="font-family: 'Arial', sans-serif; color: #1d3557;">Full Stack Developer</h3>
+                  <p><strong>Job Description:</strong> Proficient in frontend and backend technologies to build applications.</p>
+                  <p><strong>Required Skills:</strong> React.js, Node.js, Express.js, MongoDB</p>
+                  <p><strong>Experience:</strong> 4+ years in full-stack development.</p>
+                  <button onclick="openApplyForm(3, 'Full Stack Developer', 'Proficient in frontend and backend technologies to build applications. Skills required: React.js, Node.js, Express.js, MongoDB. Experience: 4+ years in full-stack development.')" style="background-color: #1d3557; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Apply</button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-
-      <div id="apply-form-modal" class="apply-form-modal">
-        <div class="apply-form-modal-content">
-          <span class="close-btn" onclick="closeApplyForm()">&times;</span>
-          <h2>Apply for the Job</h2>
+      
+      <!-- Modal for Apply Form -->
+      <div id="apply-form-modal" class="apply-form-modal" style="display: none;">
+        <div class="apply-form-modal-content" style="background: #ffffff; color: #333; border-radius: 10px; padding: 30px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
+          <span class="close-btn" onclick="closeApplyForm()" style="color: #1d3557; font-size: 30px; cursor: pointer;">&times;</span>
+          <h2 style="text-align: center; color: #1d3557; font-family: 'Arial', sans-serif;">Apply for the Job</h2>
+          <p id="job-description" style="color: #333;"></p>
           <form id="apply-form">
             <div class="mb-3">
-              <label for="name">Full Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                class="form-control"
-                required
-              />
+              <label for="name" style="color: #1d3557; font-family: 'Arial', sans-serif;">Full Name</label>
+              <input type="text" id="name" name="name" class="form-control" required style="background: #f4f4f4; color: #333; border-radius: 8px; border: 1px solid #ddd; padding: 10px;" />
             </div>
             <div class="mb-3">
-              <label for="mobile">Mobile Number</label>
-              <input
-                type="text"
-                id="mobile"
-                name="mobile"
-                class="form-control"
-                required
-              />
+              <label for="mobile" style="color: #1d3557; font-family: 'Arial', sans-serif;">Mobile Number</label>
+              <input type="text" id="mobile" name="mobile" class="form-control" required style="background: #f4f4f4; color: #333; border-radius: 8px; border: 1px solid #ddd; padding: 10px;" />
             </div>
             <div class="mb-3">
-              <label for="email">Email Address</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                class="form-control"
-                required
-              />
+              <label for="email" style="color: #1d3557; font-family: 'Arial', sans-serif;">Email Address</label>
+              <input type="email" id="email" name="email" class="form-control" required style="background: #f4f4f4; color: #333; border-radius: 8px; border: 1px solid #ddd; padding: 10px;" />
             </div>
             <div class="mb-3">
-              <label for="resume">Resume Link (URL)</label>
-              <input
-                type="url"
-                id="resume"
-                name="resume"
-                class="form-control"
-                placeholder="Enter the link to your resume"
-                required
-              />
+              <label for="resume" style="color: #1d3557; font-family: 'Arial', sans-serif;">Resume Link (URL)</label>
+              <input type="url" id="resume" name="resume" class="form-control" placeholder="Enter the link to your resume" required style="background: #f4f4f4; color: #333; border-radius: 8px; border: 1px solid #ddd; padding: 10px;" />
             </div>
-
+            <div class="mb-3">
+              <label for="cv" style="color: #1d3557; font-family: 'Arial', sans-serif;">Upload CV</label>
+              <input type="file" id="cv" name="cv" class="form-control" required style="background: #f4f4f4; color: #333; border-radius: 8px; border: 1px solid #ddd; padding: 10px;" />
+            </div>
+      
             <input type="hidden" id="jobId" name="job_id" />
-
+      
             <div class="mb-3">
-              <button type="submit" class="btn btn-primary">
-                Submit Application
-              </button>
+              <button type="submit" class="btn btn-primary" style="background: #1d3557; color: white; border: none; padding: 12px 20px; border-radius: 8px; font-size: 16px; cursor: pointer;">Submit Application</button>
             </div>
           </form>
         </div>
       </div>
+      
+      
+      <!-- Modal Styles -->
+     
+      
+      <script>
+        function openApplyForm(jobId, jobTitle, jobDescription) {
+          document.getElementById('job-description').innerText = jobDescription;
+          document.getElementById('jobId').value = jobId;
+          document.getElementById('apply-form-modal').style.display = 'flex';
+        }
+      
+        function closeApplyForm() {
+          document.getElementById('apply-form-modal').style.display = 'none';
+        }
+      
+        // Optionally, handle form submission
+        document.getElementById('apply-form').addEventListener('submit', function (e) {
+          e.preventDefault();
+          alert('Your application has been submitted!');
+          closeApplyForm();
+        });
+      </script>
+      
+      
     </main>
-    <footer id="footer" class="footer dark-background">
-      <div class="container">
-        <h3 class="sitename">Inofinitive SR</h3>
-        <p>
-          transform your ideas into impactful solutions. Let’s collaborate to
-          drive your business forward with technology that works for you.
-        </p>
-
-        <div class="social-links d-flex justify-content-center">
-          <a
-            href="https://www.instagram.com/inofinitive?igsh=MTRmc3BkeGF2ems4Nw=="
-            ><i class="bi bi-instagram"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/inofinitive-sr-technologies-2024mbnr-it-hub?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-            ><i class="bi bi-linkedin"></i
-          ></a>
-          <a
-            href="https://www.facebook.com/inofinitivesrtechnologies?mibextid=ZbWKwL"
-            ><i class="bi bi-facebook"></i
-          ></a>
-          <a href="https://x.com/inofinitiveSR"
-            ><i class="bi bi-twitter"></i
-          ></a>
-          <a href="https://wa.me/7416305104"><i class="bi bi-whatsapp"></i></a>
-        </div>
-        <div class="container">
-          <div class="copyright">
-            <span> © 2024</span>
-            <strong class="px-1 sitename">Inofinitive SR</strong>
-            <span>All Rights Reserved</span>
+    <footer id="footer" style="background: linear-gradient(145deg, #121212, #292929); padding: 80px 20px; color: #ffffff; font-family: 'Poppins', sans-serif;">
+      <div class="container d-flex flex-column flex-lg-row justify-content-between align-items-center text-center text-lg-start">
+        <!-- Section 1: Logo and Social Media Icons -->
+        <div class="footer-section text-center mb-4 mb-lg-0">
+          <img src="assets/img/logo.jpg" alt="Inofinitive SR Logo" style="width: 200px; border-radius: 50%; box-shadow: 0 8px 20px rgba(255, 204, 0, 0.7); margin-bottom: 25px;">
+          <div class="social-links d-flex justify-content-center">
+            <a href="https://www.instagram.com/inofinitive?igsh=MTRmc3BkeGF2ems4Nw==" class="me-3" style="transition: transform 0.3s;">
+              <img src="assets/img/instagram.svg" alt="Instagram" style="width: 35px;">
+            </a>
+            <a href="https://www.linkedin.com/in/inofinitive-sr-technologies-2024mbnr-it-hub?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="me-3" style="transition: transform 0.3s;">
+              <img src="assets/img/linkedin.svg" alt="LinkedIn" style="width: 35px;">
+            </a>
+            <a href="https://x.com/inofinitiveSR" class="me-3" style="transition: transform 0.3s;">
+              <img src="assets/img/x.svg" alt="Twitter" style="width: 35px;">
+            </a>
+            <a href="https://www.facebook.com/inofinitivesrtechnologies?mibextid=ZbWKwL" style="transition: transform 0.3s;">
+              <img src="assets/img/facebook.svg" alt="Facebook" style="width: 35px;">
+            </a>
           </div>
         </div>
+    
+        <!-- Section 2: Quick Links -->
+        <div class="footer-section">
+          <h5 style="font-size: 26px; font-weight: bold; color: #ffcc00; margin-bottom: 20px; text-transform: uppercase;">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#home" style="font-size: 20px; color: #ffffff; text-decoration: none; margin-bottom: 10px; display: block;">Home</a></li>
+            <li><a href="#about" style="font-size: 20px; color: #ffffff; text-decoration: none; margin-bottom: 10px; display: block;">About Us</a></li>
+            <li><a href="#services" style="font-size: 20px; color: #ffffff; text-decoration: none; margin-bottom: 10px; display: block;">Services</a></li>
+            <li><a href="#contact" style="font-size: 20px; color: #ffffff; text-decoration: none;">Contact</a></li>
+          </ul>
+        </div>
+    
+        <!-- Section 3: Contact Details -->
+        <div class="footer-section text-center text-lg-start">
+          <h5 style="font-size: 26px; font-weight: bold; color: #ffcc00; margin-bottom: 20px; text-transform: uppercase;">Contact Us</h5>
+          <p style="font-size: 20px; margin-bottom: 10px;">Email: <a href="mailto:info@inofinitive.com" style="color: #ffffff; text-decoration: none; font-weight: 500;">info@inofinitive.com</a></p>
+          <p style="font-size: 20px;">Phone: <a href="tel:+7416305104" style="color: #ffffff; text-decoration: none; font-weight: 500;">+91-7416305104</a></p>
+        </div>
+      </div>
+    
+      <!-- Footer Bottom -->
+      <div class="container text-center mt-5">
+        <hr style="border-color: rgba(255, 255, 255, 0.2);">
+        <p style="font-size: 18px; color: #cccccc;">© 2024 <strong style="color: #ffcc00; font-size: 20px;">Inofinitive SR</strong>. All Rights Reserved.</p>
       </div>
     </footer>
     <!-- email js script -->
