@@ -950,6 +950,13 @@ section,
   transform: translate(5px, 0);
 }
 
+/* Responsive adjustment for mobile devices */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 24px; /* Smaller font size for mobile */
+  }
+}
+
 /*--------------------------------------------------------------
 # Features Section
 --------------------------------------------------------------*/
@@ -1060,7 +1067,7 @@ section,
 .carousel-container h2 {
   font-size: 45px;
   font-weight: bold;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   color: #fff;
   display: flex;
   align-items: center;
