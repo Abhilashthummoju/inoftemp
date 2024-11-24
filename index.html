@@ -768,11 +768,12 @@
       <div id="hero-carousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
 
         <!-- Slide 1 -->
-        <div class="carousel-item active" >
           <div class="carousel-container" >
             <!-- Text Section -->
             <div>
-              <h2 class="animate__animated animate__fadeInDown">Welcome to <span> &nbsp;Inofinitive SR</span></h2>
+              <h2 class="animate__animated animate__fadeInDown">
+                Welcome to <span id="typing-text"></span>
+              </h2>
               <p class="animate__animated animate__fadeInUp">
                 At Inofinitive SR Technologies, we redefine possibilities through cutting-edge solutions. From innovative Application Development to pioneering advancements in Artificial Intelligence (AI), Machine Learning (ML), and Robotics, we empower businesses to excel. Partner with us for tailored strategies that drive growth, optimize efficiency, and transform your digital journey.
               </p>
@@ -802,7 +803,6 @@
               <img src="assets/img/sap.jpg" alt="Image 3">
             </div>
           </div>
-        </div>
         
        
       </div>
@@ -825,6 +825,19 @@
     </section>
 <!-- Script for carousel -->
     <script>
+       const text = "Inofinitive SR";
+  let index = 0;
+
+  const typingEffect = () => {
+    const element = document.getElementById("typing-text");
+    if (index < text.length) {
+      element.textContent += text.charAt(index);
+      index++;
+      setTimeout(typingEffect, 150); // Adjust speed if needed
+    }
+  };
+
+  typingEffect();
       const images = document.querySelectorAll('#heroimg img');
       let currentIndex = 0;
     

@@ -665,6 +665,36 @@ section,
 --------------------------------------------------------------*/
 
 /* Hero Icons Styling */
+
+#typing-text {
+  color: #17a2b8; /* Change to your preferred color */
+  font-weight: bold;
+  border-right: 2px solid #17a2b8;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: typing 3s steps(12, end), blink-caret 0.5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 12ch; /* Adjust based on the length of "Inofinitive SR" */
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #17a2b8;
+  }
+}
+
 #heroicons {
   display: flex;
   flex-wrap: wrap;
@@ -694,6 +724,7 @@ section,
 
 @media (max-width: 767px) {
   #heroicons {
+    display: flex;
     flex-direction: row;
     justify-content: center;
   }
