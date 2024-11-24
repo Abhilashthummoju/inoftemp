@@ -191,19 +191,135 @@
 <!-- HERO SECTION  -->
 
 
-<section id="hero" class="hero section dark-background">
+<section id="hero" class="hero section dark-background"  >
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Section: Social Icons -->
+      <div class="col-md-1 d-flex flex-column align-items-center social-icons-vertical">
+        <a href="https://www.instagram.com/inofinitive?igsh=MTRmc3BkeGF2ems4Nw==" class="social-icon">
+          <img src="assets/img/instagram.svg" alt="Instagram">
+        </a>
+        <a href="https://www.linkedin.com/in/inofinitive-sr-technologies-2024mbnr-it-hub?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-icon">
+          <img src="assets/img/linkedin.svg" alt="LinkedIn">
+        </a>
+        <a href="https://x.com/inofinitiveSR" class="social-icon">
+          <img src="assets/img/x.svg" alt="Twitter">
+        </a>
+        <a href="https://www.facebook.com/inofinitivesrtechnologies?mibextid=ZbWKwL" class="social-icon">
+          <img src="assets/img/facebook.svg" alt="Facebook">
+        </a>
+      </div>
 
-  <div id="hero-carousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
-
-    <!-- Slide 1 -->
-    <div class="carousel-item active">
-      <div class="carousel-container">
-        <h2 class="animate__animated animate__fadeInDown">Welcome to <span style="color: #0dcaf0; text-decoration: none;">Inofinitive SR</span></h2>
-        <p class="animate__animated animate__fadeInUp">
-          At Inofinitive SR Technologies, we are committed to delivering reliable and efficient technology solutions that help businesses grow and adapt in a rapidly changing world. Our expertise spans across a wide range of services, designed to meet the needs of modern enterprises.
-        </p>
+      <!-- Middle Section: Welcome Text -->
+      <div class="col-md-6" >
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">
+            Welcome to <span class="typing-text">Inofinitive SR</span>
+          </h2>
+          <p class="animate__animated animate__fadeInUp">
+            At <span class="text-accent">Inofinitive SR</span>, we offer <span class="text-accent">innovative technology solutions</span>, including <span class="text-accent">Application Development</span>, <span class="text-accent">Artificial Intelligence (AI)</span>, <span class="text-accent">Machine Learning (ML)</span>, and <span class="text-accent">SAP</span>. Our custom solutions drive <span class="text-accent">business growth</span>, enhance <span class="text-accent">operational efficiency</span>, and enable <span class="text-accent">digital transformation</span>.
+          </p>
+          <div>
+            <a href="#read-more" class="btn btn-primary custom-btn btn-animated">Read More</a>
+            <a href="#contact-us" class="btn btn-outline-light custom-btn btn-animated">Contact Us</a>
+          </div>              
+        </div>
+      </div>
+      
+      <!-- Right Section: Image Carousel -->
+      <div class="col-md-5">
+        <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/img/appdev.jpg" class="d-block w-100 animated-image" alt="Image 1">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img/sap.jpg" class="d-block w-100 animated-image" alt="Image 2">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img/ai.jpg" class="d-block w-100 animated-image" alt="Image 3">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
       </div>
     </div>
+  </div>
+
+  <!-- Waves at the bottom -->
+  <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
+    <defs>
+      <path id="wave-path" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+    </defs>
+    <g class="wave1">
+      <use xlink:href="#wave-path" x="50" y="3"></use>
+    </g>
+    <g class="wave2">
+      <use xlink:href="#wave-path" x="50" y="0"></use>
+    </g>
+    <g class="wave3">
+      <use xlink:href="#wave-path" x="50" y="9"></use>
+    </g>
+  </svg>
+</section>
+
+
+
+
+
+
+
+<!--  temp hero  -->
+
+<section id="hero" class="hero section dark-background">
+
+  <div id="hero-carousel"  class="container carousel carousel-fade">
+
+    <!-- Slide 1 -->
+      <div class="carousel-container" >
+        <!-- Text Section -->
+        <div>
+          <h2 class="animate__animated animate__fadeInDown">
+            Welcome to <span id="typing-text"></span>
+          </h2>
+          <p class="animate__animated animate__fadeInUp">
+            At Inofinitive SR Technologies, we redefine possibilities through cutting-edge solutions. From innovative Application Development to pioneering advancements in Artificial Intelligence (AI), Machine Learning (ML), and Robotics, we empower businesses to excel. Partner with us for tailored strategies that drive growth, optimize efficiency, and transform your digital journey.
+          </p>
+          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Contact</a>
+
+          <div id="heroicons" class="d-flex flex-column flex-md-row align-items-center">
+            <a href="https://www.instagram.com/inofinitive?igsh=MTRmc3BkeGF2ems4Nw==" class="icon-link">
+              <img src="assets/img/instagram.svg" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com/in/inofinitive-sr-technologies-2024mbnr-it-hub?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="icon-link">
+              <img src="assets/img/linkedin.svg" alt="LinkedIn">
+            </a>
+            <a href="https://x.com/inofinitiveSR" class="icon-link">
+              <img src="assets/img/x.svg" alt="Twitter">
+            </a>
+            <a href="https://www.facebook.com/inofinitivesrtechnologies?mibextid=ZbWKwL" class="icon-link">
+              <img src="assets/img/facebook.svg" alt="Facebook">
+            </a>
+          </div>
+        </div>
+    
+        <!-- Image Scrolling Section -->
+        <div id="heroimg" class="hero-images">
+          <img src="assets/img/appdev.jpg" alt="Image 1" class="active">
+          <img src="assets/img/ai.jpg" alt="Image 2">
+          <img src="assets/img/sap.jpg" alt="Image 3">
+        </div>
+      </div>
+    
+   
   </div>
 
   <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
@@ -221,4 +337,4 @@
     </g>
   </svg>
 
-</section><!-- /Hero Section -->
+</section>
