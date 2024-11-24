@@ -108,34 +108,35 @@
 
   <!-- HERO STYLES -->
   <style>
-/* Hero Section Enhancements */
+   /* Hero Section Enhancements */
 .hero {
   position: relative;
   background-color: #2b2b2b;
   color: #fff;
-  padding: 100px 0;
+  padding: 80px 20px;
 }
 
-.carousel-container {
-  text-align: start;
-  width: 100%;
+.container {
+  max-width: 1200px;
   margin: 0 auto;
-  
-
 }
 
-.carousel-container h2 {
-  font-size: 45px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #fff;
+/* Social Icons */
+.social-icons-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
-.hero-description {
-  font-size: 18px;
-  line-height: 1.8;
-  margin-top: 20px;
-  color: #e0e0e0;
+.social-icon img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+  transform: scale(1.1);
 }
 
 /* Typing Text Animation */
@@ -145,7 +146,6 @@
   overflow: hidden;
   border-right: 3px solid #feb47b;
   width: 0;
-  margin-left: 1%;
   animation: typing 4s steps(30) infinite, blink-caret 0.75s step-end infinite;
   background: linear-gradient(90deg, #ff7e5f, #feb47b);
   -webkit-background-clip: text;
@@ -170,22 +170,25 @@
   }
 }
 
-/* Highlight Class */
-.text-accent {
-  font-family: 'Arial', sans-serif; /* Strong font for emphasis */
-  background: linear-gradient(90deg, #ffffff, #f0f0f0); /* Subtle white gradient */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold; /* Make the text bold */
-  font-size: 1.2rem; /* Increase font size for emphasis */
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+/* Text Styling */
+.carousel-container h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff;
 }
 
-/* Button Styles */
+.hero-description {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-top: 20px;
+  color: #e0e0e0;
+}
+
+/* Buttons */
 .custom-btn {
-  font-size: 16px;
-  padding: 12px 24px;
-  margin: 10px;
+  font-size: 0.875rem;
+  padding: 10px 20px;
   border-radius: 50px;
   text-transform: uppercase;
   font-weight: bold;
@@ -211,111 +214,75 @@
   box-shadow: 0px 8px 20px rgba(255, 126, 95, 0.3);
 }
 
-/* Button Animations */
-.custom-btn.btn-animated::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
+/* Carousel */
+.carousel-inner img {
   width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.2);
-  transition: all 0.4s ease;
-  z-index: 0;
-}
-
-.custom-btn.btn-animated:hover::before {
-  left: 0;
-  transform: scale(1.2);
-}
-
-.custom-btn.btn-animated:hover {
-  color: #000;
-}
-
-.custom-btn.btn-outline-light:hover {
-  background: #fff;
-  color: #000;
-  box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.3);
-}
-
-
-/* Buttons */
-.button-group {
-  display: flex;
-  gap: 15px;
-  margin-top: 30px;
-}
-
-.custom-btn {
-  font-size: 16px;
-  padding: 12px 30px;
+  height: auto;
   border-radius: 8px;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.custom-btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.3);
-}
-
-.btn-primary {
-  background: #feb47b;
-  color: #2b2b2b;
-  border: none;
-  font-weight: bold;
-}
-
-.btn-primary:hover {
-  background: #ff7e5f;
-  color: #fff;
-}
-
-.btn-outline-light {
-  background: transparent;
-  color: #fff;
-  border: 2px solid #feb47b;
-}
-
-.btn-outline-light:hover {
-  background: #feb47b;
-  color: #2b2b2b;
 }
 
 /* Responsive Adjustments */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
+  .hero {
+    padding: 60px 10px;
+  }
+
+  .carousel-container h2 {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+  }
+
+  .custom-btn {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+
   .social-icons-vertical {
-    flex-direction: row;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 20px;
+    gap: 10px;
   }
 
   .social-icon img {
     width: 30px;
     height: 30px;
   }
+}
 
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .social-icons-vertical {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .carousel-container {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 576px) {
   .carousel-container h2 {
-    font-size: 36px;
+    font-size: 1.5rem;
   }
 
   .hero-description {
-    font-size: 16px;
+    font-size: 0.8rem;
   }
 
   .custom-btn {
-    padding: 10px 20px;
-  }
-
-  /* Set width of middle section to 90% on smaller screens */
-  .carousel-container {
-    width: 90%;
-    margin: 0 auto;
+    padding: 6px 12px;
+    font-size: 0.75rem;
   }
 }
-  </style>
+
+    </style>
 
 
 <!-- FAQ SECTION  -->
@@ -1043,7 +1010,6 @@
         </g>
       </svg>
     </section>
-
     <!-- About Section -->
     <section id="about" class="about section">
       <!-- Section Title -->
