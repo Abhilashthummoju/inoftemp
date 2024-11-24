@@ -13,7 +13,7 @@
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #6b6a6a; /* Default color used for the majority of the text content across the entire website */
+  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #2a2c39; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #ef6603; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
@@ -616,7 +616,7 @@ Welcome TExt STYles
 section,
 .section {
   color: var(--default-color);
-  /* background-color: var(--background-color); */
+  background-color: var(--background-color);
   padding: 60px 0;
   scroll-margin-top: 77px;
   overflow: clip;
@@ -663,6 +663,74 @@ section,
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+
+/* Hero Icons Styling */
+#heroicons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; /* Vertically center icons */
+  justify-content: center; /* Horizontally center icons */
+  gap: 15px; /* Add spacing between icons */
+  margin-top: 20px; /* Optional, for spacing from above content */
+}
+
+#heroicons img {
+  width: 40px; /* Set a consistent icon size */
+  height: 40px;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+#heroicons img:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive Alignment */
+@media (min-width: 768px) {
+  #heroicons {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 767px) {
+  #heroicons {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* Hero Images Scrolling */
+.hero-images {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Set a fixed height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-images img {
+  position: absolute;
+  width: 100%; /* Make images responsive */
+  max-width: 600px; /* Limit maximum width */
+  height: auto; /* Maintain aspect ratio */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  border-radius: 5%;
+
+}
+
+.hero-images img.active {
+  opacity: 1;
+}
+
+/* Responsive Height for Smaller Screens */
+@media (max-width: 767px) {
+  .hero-images {
+    height: 200px; /* Adjust height for smaller screens */
+  }
+}
 .hero {
   width: 100%;
   overflow: hidden;
@@ -678,11 +746,12 @@ section,
 .hero .carousel-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  /* align-items: center; */
+  flex-direction: row;
   text-align: center;
   position: relative;
   min-height: 75vh;
+  /* min-width: 90vw; */
   padding-top: 60px;
 }
 
@@ -958,6 +1027,8 @@ section,
 .features .tab-pane p:last-child {
   margin-bottom: 0;
 }
+
+
 .hero {
   position: relative;
   background-color: #2b2b2b;
