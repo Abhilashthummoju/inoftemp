@@ -180,6 +180,7 @@ body {
     background-color: #f9f9f9;
     border-bottom: 2px solid #e1e1e1;
     font-family: 'Georgia', serif;
+    flex-wrap: wrap;  /* Allow wrapping of content */
 }
 
 .job-assistance-container {
@@ -192,6 +193,7 @@ body {
 .job-assistance-content {
     max-width: 50%;
     text-align: left;
+    padding-right: 2rem;  /* Padding to prevent text from being too close to the image */
 }
 
 .job-assistance-title {
@@ -201,7 +203,6 @@ body {
     margin-bottom: 2rem;
     font-family: 'Georgia', serif;
     letter-spacing: 1.5px;
-    /* text-transform: uppercase; */
     line-height: 1.2;
     transition: color 0.3s ease;
 }
@@ -216,7 +217,6 @@ body {
     font-size: 1rem;
     color: black;
     margin-bottom: 2rem;
-    /* line-height: 1.8; */
 }
 
 .job-assistance-list li {
@@ -299,10 +299,28 @@ body {
 
     .job-assistance-list {
         font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .job-assistance-image {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;  /* Add some space between the text and image */
     }
 
     .job-assistance-image img {
-        max-width: 80%;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .job-assistance-title {
+        font-size: 2rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .job-assistance-list {
+        font-size: 1.2rem;
     }
 }
 
