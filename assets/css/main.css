@@ -838,8 +838,19 @@ section,
     flex-direction: column;
   }
 
-  .hero h2 {
+  .hero .carousel-container h2 {
     font-size: 20px;
+  }
+  @keyframes typing {
+    0% {
+      width: 0;
+    }
+    50% {
+      width: 50%;
+    }
+    100% {
+      width: 0;
+    }
   }
 }
 
