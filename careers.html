@@ -38,8 +38,28 @@
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
     <style>
+
+.search-bar {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 80%;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: #007bff;
+}
+
       .job-posting {
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
     border-radius: 15px;
     padding: 25px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
@@ -48,6 +68,7 @@
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
   }
 
   .job-posting:hover {
@@ -143,13 +164,15 @@
 
 .apply-form-modal {
   display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
 }
 
 .apply-form-modal-content {
@@ -268,7 +291,10 @@
           <h1>Your Future Starts Here – Be Part of Something Exciting!</h1>
         </div>
       </div>
-
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search for job roles..." oninput="filterJobs()">
+    </div>
+    
       <section id="job-listings" class="job-listings section" style="background-color: #f4f4f4; color: #333; padding: 40px; border-radius: 10px;">
         <div class="container">
           <h1 class="text-center" style="font-family: 'Arial', sans-serif; color: #1d3557; margin-bottom: 40px;">Open Positions</h1>
