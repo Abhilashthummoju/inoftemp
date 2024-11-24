@@ -785,7 +785,7 @@
             <!-- Text Section -->
             <div>
               <h2 class="animate__animated animate__fadeInDown">
-                Welcome to <span id="typing-text"></span>
+                Welcome to <span class="typing-text">Inofinitive SR</span>
               </h2>
               <p class="animate__animated animate__fadeInUp">
                 At Inofinitive SR Technologies, we redefine possibilities through cutting-edge solutions. From innovative Application Development to pioneering advancements in Artificial Intelligence (AI), Machine Learning (ML), and Robotics, we empower businesses to excel. Partner with us for tailored strategies that drive growth, optimize efficiency, and transform your digital journey.
@@ -835,19 +835,6 @@
     </section>
 <!-- Script for carousel -->
     <script>
-       const text = "Inofinitive SR";
-  let index = 0;
-
-  const typingEffect = () => {
-    const element = document.getElementById("typing-text");
-    if (index < text.length) {
-      element.textContent += text.charAt(index);
-      index++;
-      setTimeout(typingEffect, 150); // Adjust speed if needed
-    }
-  };
-
-  typingEffect();
       const images = document.querySelectorAll('#heroimg img');
       let currentIndex = 0;
     
