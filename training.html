@@ -190,28 +190,37 @@
 <body>
     <!-- HEADER SECTION -->
     <header id="header" class="header d-flex align-items-center fixed-top" style="background: linear-gradient(145deg, #121212, #292929);">
-        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between" >
-    
-          <a href="index.html" class="logo d-flex align-items-center">
-            <img src="assets/img/logo.jpg" alt="">
-            <h1 class="sitename">Inofinitive SR</h1>
-          </a>
-    
-          <nav id="navmenu" class="navmenu">
-            <ul>
-              <li><a href="#hero" class="active">Home</a></li>
-              <li><a href="service-details.html">Services</a></li>
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="careers.html">Careers</a></li>
-              <li><a href="training.html">Training</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-          </nav>
-    
-        </div>
-      </header>
+      <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between" >
+  
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="assets/img/logo.jpg" alt="">
+          <h1 class="sitename">Inofinitive SR</h1>
+        </a>
+  
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="portfolio.html">About</a></li>
+            <li class="dropdown"><a href="service-details.html"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="service-details.html#it-services">IT Services</a></li>
+                <li><a href="service-details.html#NON-It-Services"><span>Non-It Services</span></a></li>
+                <li><a href="service-details.html#BPO-services">BPS</a></li>
+                <li><a href="service-details.html#Digital-marketing">Digital Marketing</a></li>
+                <li><a href="service-details.html#Consulting">IT Consulting</a></li>
+                <li><a href="service-details.html#SAP-Services">SAP Services</a></li>
+              </ul>
+            </li>
+            <li><a href="training.html" class="active">Training</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+  
+      </div>
+    </header>
 
   <section class="hero">
     <h1>Welcome to Infonitive SR</h1>
@@ -272,8 +281,79 @@
     </div>
   </section>
 
-  <footer>
-    &copy; 2024 Infonitive SR. All Rights Reserved.
+  <footer id="footer" class="footer" style=" background: linear-gradient(145deg, #1a1a1a, #0f0f0f);">
+    <div class="container d-flex flex-column flex-lg-row justify-content-between align-items-center text-center text-lg-start">
+      <!-- Section 1: Logo and Social Media -->
+      <div class="footer-section text-center mb-4 mb-lg-0">
+        <img src="assets/img/logo.jpg" alt="Inofinitive SR Logo" style="width: 200px; border-radius: 50%; box-shadow: 0 8px 20px rgba(255, 204, 0, 0.7); margin-bottom: 25px;">
+        <div class="social-links d-flex justify-content-center">
+          <a href="https://www.instagram.com/inofinitive?igsh=MTRmc3BkeGF2ems4Nw==" class="me-3">
+            <img src="assets/img/instagram.svg" alt="Instagram">
+          </a>
+          <a href="https://www.linkedin.com/in/inofinitive-sr-technologies-2024mbnr-it-hub?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="me-3">
+            <img src="assets/img/linkedin.svg" alt="LinkedIn">
+          </a>
+          <a href="https://x.com/inofinitiveSR" class="me-3">
+            <img src="assets/img/x.svg" alt="Twitter">
+          </a>
+          <a href="https://www.facebook.com/inofinitivesrtechnologies?mibextid=ZbWKwL">
+            <img src="assets/img/facebook.svg" alt="Facebook">
+          </a>
+        </div>
+      </div>
+  
+      <!-- Section 2: Quick Links -->
+      <div class="footer-section">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#services">Training</a></li>
+          <li><a href="#services">Careers</a></li>
+          <li><a href="#services">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Section 3: Contact Details -->
+      <div class="footer-section">
+        <h5>Contact Us</h5>
+        <p>Email: <a href="mailto:info@inofinitive.com">support@inofinitivesr.com</a></p>
+        <p>Phone: <a href="tel:+7416305104">+91-7416305104</a></p>
+      </div>
+  
+      <!-- Section 4: Newsletter -->
+      <div class="footer-section text-center text-lg-start">
+        <h5>Subscribe to our Newsletter</h5>
+        <p>Stay updated with our latest news and offers.</p>
+        <form>
+          <input type="email" placeholder="Enter your email" required>
+          <br>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  
+    <!-- Footer Bottom -->
+    <div class="container text-center mt-5">
+      <hr>
+      <p>© 2024 <strong>Inofinitive SR</strong>. All Rights Reserved.</p>
+    </div>
   </footer>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
 </html>
