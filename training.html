@@ -10,6 +10,8 @@
     <!-- Favicons -->
     <link href="assets/img/logo.jpg" rel="icon">
     <link href="assets/img/logo.jpg" rel="apple-touch-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
   
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -26,165 +28,789 @@
   
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet">
+  <!-- Programs section -->
+  <style>
+ :root {
+  --primary-color: #f89c5e; /* New light orange */
+  --secondary-color: #444; /* Darker gray */
+  --card-bg-color: #ffffff; /* White background */
+  --card-hover-bg: #f2f2f2; /* Light hover background */
+  --card-border-color: #ececec; /* Soft border */
+  --text-muted-color: #6d6d6d;
+  --gradient-bg: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fcfcfc;
+}
+
+#programs-section {
+  padding: 5rem 3rem;
+  background: #fefefe;
+}
+
+.programs-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+.program-card {
+  background: var(--card-bg-color);
+  border: 1px solid var(--card-border-color);
+  border-radius: 16px;
+  padding: 2.5rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.program-card i {
+  font-size: 4rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  animation: fadeInScale 1s ease-in-out;
+}
+
+.program-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.program-card p {
+  font-size: 1.2rem;
+  color: var(--text-muted-color);
+}
+
+.program-card:hover {
+  transform: translateY(-10px);
+  background: var(--card-hover-bg);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.program-card:before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-bg);
+  z-index: -1;
+  transition: top 0.4s ease-in-out;
+}
+
+.program-card:hover:before {
+  top: 0;
+  border-radius: 16px;
+}
+
+.program-card h3, .program-card p {
+  position: relative;
+  z-index: 2;
+}
+
+.program-card i {
+  position: relative;
+  z-index: 2;
+}
+
+/* Keyframe Animation for Icons */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .programs-title {
+    font-size: 2.2rem;
+  }
+
+  .program-card {
+    padding: 2rem;
+  }
+
+  .program-card i {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .program-card {
+    padding: 1.5rem;
+  }
+
+  .program-card i {
+    font-size: 2.5rem;
+  }
+}
+
+  </style>
+  <!-- Job Assistance  -->
+   <style>
+/* Job Assistance Section */
+#job-assistance {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 4rem;
+    background-color: #f9f9f9;
+    border-bottom: 2px solid #e1e1e1;
+    font-family: 'Georgia', serif;
+}
+
+.job-assistance-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.job-assistance-content {
+    max-width: 50%;
+    text-align: left;
+}
+
+.job-assistance-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 2rem;
+    font-family: 'Georgia', serif;
+    letter-spacing: 1.5px;
+    /* text-transform: uppercase; */
+    line-height: 1.2;
+    transition: color 0.3s ease;
+}
+
+.job-assistance-title:hover {
+    color: #FF6F00;  /* Change title color on hover */
+}
+
+.job-assistance-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1rem;
+    color: black;
+    margin-bottom: 2rem;
+    /* line-height: 1.8; */
+}
+
+.job-assistance-list li {
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-left: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.job-assistance-list li:hover {
+    transform: translateX(10px);
+}
+
+.job-assistance-list li::before {
+  content: '✔';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background-color: #FF6F00; /* Circle color */
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%; /* Makes the shape a circle */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
+}
+
+.btn-primary {
+    background-color: #FF6F00;
+    padding: 1rem 2rem;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 2rem;
+}
+
+.btn-primary:hover {
+    background-color: #ff8c1a;
+    transform: translateY(-4px);
+}
+
+.job-assistance-image img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.job-assistance-image img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 768px) {
+    #job-assistance {
+        flex-direction: column;
+        padding: 3rem 2rem;
+        text-align: center;
+    }
+
+    .job-assistance-content {
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .job-assistance-title {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .job-assistance-list {
+        font-size: 1.4rem;
+    }
+
+    .job-assistance-image img {
+        max-width: 80%;
+    }
+}
+
+   </style>
+
+   <!-- What we Provide -->
+   <style>
+ /* Section styling */
+#what-we-provide {
+  padding: 6rem 2rem;
+  background: #2e2e2e; /* Gray background */
+  text-align: center;
+}
+
+.section-title {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 3rem;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background-color: #ff6f00;
+  margin: 1rem auto;
+  display: block;
+  border-radius: 2px;
+}
+
+/* Cards container */
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Card styling */
+.card {
+  width: 30%;
+  background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-align: center;
+  transition: transform 0.4s, box-shadow 0.4s, background-color 0.4s;
+  backdrop-filter: blur(10px);
+  padding: 20px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  background-color: white; /* Change background to white on hover */
+  color: #333; /* Update text color for better contrast */
+}
+
+/* Card image container */
+.card-img-container {
+  height: 250px;
+  overflow: hidden;
+  border-bottom: 3px solid #ff6f00;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+
+.card-img:hover {
+  transform: scale(1.1);
+}
+
+/* Title and description styling */
+.card-title {
+  font-size: 2rem;
+  color: #f16d08;
+  margin: 1.5rem 0 1rem;
+  font-family: 'Georgia', serif;
+  text-transform: uppercase;
+}
+
+.card-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  padding: 0 1.5rem;
+  color: #ddd;
+  transition: color 0.4s;
+}
+
+.card:hover .card-description {
+  color: #333; /* Update description text color on hover */
+}
+
+.card:hover .card-title {
+  color: #ff6f00; /* Keep title color consistent on hover */
+}
+
+/* Animations */
+.card {
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 1024px) {
+  .card {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+}
+
+
+   </style>
+
+
+<!-- Partners -->
+<style>
+ /* Partners Section Styling */
+.partners {
+  background: radial-gradient(circle at center, #141e30, #243b55); /* New theme with a blue gradient */
+  padding: 40px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.section-title {
+  font-size: 2.4rem; 
+  font-weight: bold;
+  color: #4cafef; /* Updated title color */
+  margin-bottom: 10px; /* Slight gap between title and description */
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.section-description {
+  font-size: 1rem;
+  color: #b0c4de; /* Softer description color */
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Carousel Container */
+.partners-carousel {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 15px 0; 
+}
+
+/* Scrolling Track */
+.carousel-track {
+  display: flex;
+  gap: 25px; /* More space between logos */
+  animation: scroll 20s linear infinite;
+}
+
+.carousel-track img {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Glow effect */
+  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.5));
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-track img:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.6); /* Glow on hover */
+}
+
+/* Scrolling Animation */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-description {
+    font-size: 0.9rem;
+  }
+
+  .carousel-track img {
+    width: 100px;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-track img {
+    width: 80px;
+  }
+}
+
+
+</style>
+
+<!-- testimonials -->
+ <style>
+  #learner-testimonials {
+    background: var(--testimonials-bg);
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.testimonials-title {
+    font-size: 2.8rem;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.testimonials-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 0 1rem;
+}
+
+.testimonial-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 6px 12px var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideInUp 1s ease-in-out;
+}
+
+.testimonial-card p {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.testimonial-card h4 {
+    font-size: 1rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .testimonials-title {
+        font-size: 2rem;
+    }
+    .testimonial-card {
+        padding: 1.5rem;
+    }
+}
+ </style>
+
+ <!-- Contact section -->
   <style>
     :root {
-      --bg-black: #0d0d0d;
-      --card-dark: #1a1a1a;
-      --primary: #e63946;
-      --secondary: #f4a261;
-      --text-light: #e9ecef;
-      --text-muted: #868e96;
-      --card-hover: #292929;
-      --card-border: rgba(255, 255, 255, 0.1);
-    }
+    --contact-bg: #ff975b; /* Vibrant red */
+    --contact-text: #fff;  /* White */
+    --button-bg: #333;     /* Dark gray */
+    --button-hover: #444;  /* Slightly lighter gray */
+    --button-text: #fff;   /* White */
+}
+    #contact-us-section {
+    background: var(--contact-bg);
+    padding: 3rem 1rem;
+    text-align: center;
+    color: var(--contact-text);
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1.5s ease-in-out;
+}
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: var(--bg-black);
-      color: var(--text-light);
-      margin: 0;
-      line-height: 1.6;
-    }
+.contact-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
 
-    header {
-      background: var(--primary);
-      padding: 1.5rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    }
+.contact-description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    font-style: italic;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
 
-    header .logo {
-      font-size: 1.8rem;
-      font-weight: bold;
-      color: var(--text-light);
-    }
+.contact-button {
+    background: var(--button-bg);
+    color: var(--button-text);
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-    .nav-links {
-      display: flex;
-      gap: 1.5rem;
-    }
+.contact-button:hover {
+    background: var(--button-hover);
+    transform: translateY(-4px);
+}
 
-    .nav-links a {
-      color: var(--text-light);
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s;
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
     }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-    .nav-links a:hover {
-      color: var(--secondary);
+/* Responsive Design */
+@media (max-width: 768px) {
+    #contact-us-section {
+        padding: 3rem 1.5rem;
     }
+    .contact-title {
+        font-size: 2.4rem;
+    }
+    .contact-description {
+        font-size: 1rem;
+    }
+    .contact-button {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+}
+  </style>
 
-    .hero {
-      padding: 6rem 2rem;
-      text-align: center;
-      background: var(--card-dark);
-      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    }
+<!-- Achievements Section -->
+  <style>
+    :root {
+    --achievements-bg: #f8f9fa; /* Light gray */
+    --card-bg: #ffffff;        /* White */
+    --card-hover-bg: #f1f1f1;  /* Light hover effect */
+    --title-color: #333333;    /* Dark gray for title */
+    --stat-color: #ff6b6b;     /* Vibrant red for numbers */
+    --text-color: #666666;     /* Muted gray for text */
+}
+    #achievements-section {
+    background: var(--achievements-bg);
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: 12px;
+    animation: fadeIn 1.5s ease-in-out;
+}
 
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
+.achievements-title {
+    font-size: 3rem;
+    color: var(--title-color);
+    margin-bottom: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
 
-    .btn-primary {
-      padding: 0.8rem 2.5rem;
-      font-size: 1rem;
-      color: white;
-      background: var(--primary);
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: transform 0.3s, background 0.3s;
-    }
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
 
-    .btn-primary:hover {
-      transform: translateY(-3px);
-      background: var(--secondary);
-    }
+.achievement-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background 0.3s ease;
+    animation: bounceIn 1.5s ease;
+}
 
-    section {
-      padding: 4rem 2rem;
-    }
+.achievement-stat {
+    font-size: 2.5rem;
+    color: var(--stat-color);
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
 
-    h2 {
-      font-size: 2.5rem;
-      color: var(--primary);
-      text-align: center;
-      margin-bottom: 2rem;
-    }
+.achievement-text {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    font-style: italic;
+}
 
-    /* Card-Based Styles */
-    .grid {
-      display: grid;
-      gap: 2rem;
-    }
+.achievement-card:hover {
+    transform: translateY(-8px);
+    background: var(--card-hover-bg);
+}
 
-    .stats-grid {
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
+    to {
+        opacity: 1;
+    }
+}
 
-    .stat, .card {
-      background: var(--card-dark);
-      border: 1px solid var(--card-border);
-      border-radius: 10px;
-      padding: 2rem;
-      text-align: center;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s, background 0.3s;
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.9);
+        opacity: 0.7;
     }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
 
-    .stat:hover, .card:hover {
-      transform: translateY(-5px);
-      background: var(--card-hover);
+/* Responsive Design */
+@media (max-width: 768px) {
+    #achievements-section {
+        padding: 3rem 1.5rem;
     }
-
-    .stat h3 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+    .achievements-title {
+        font-size: 2.4rem;
     }
-
-    .stat p {
-      font-size: 1rem;
-      color: var(--text-muted);
+    .achievement-card {
+        padding: 1.5rem;
     }
-
-    .card i {
-      font-size: 2rem;
-      color: var(--secondary);
-      margin-bottom: 1rem;
+    .achievement-stat {
+        font-size: 2rem;
     }
-
-    .card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
+    .achievement-text {
+        font-size: 1rem;
     }
-
-    .card p {
-      font-size: 1rem;
-      color: var(--text-muted);
-    }
-
-    .testimonial-grid {
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-
-    .testimonial-card {
-      border-left: 4px solid var(--primary);
-      padding: 1.5rem;
-      font-size: 1rem;
-      color: var(--text-muted);
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: var(--card-dark);
-      color: var(--text-muted);
-      border-top: 1px solid var(--card-border);
-    }
+}
   </style>
 </head>
 <body>
@@ -221,66 +847,184 @@
   
       </div>
     </header>
+    <main>
 
-  <section class="hero">
-    <h1>Welcome to Infonitive SR</h1>
-    <p>Accelerating careers with cutting-edge training programs.</p>
-    <button class="btn-primary">Get Started</button>
-  </section>
+  <!-- Page Title -->
+  <div class="page-title dark-background">
+    <div class="container position-relative">
+      <h1>Unlock Your Potential with Infonitive SR</h1>
+      <p>Unlock your potential with industry-leading software development training and career-focused programs.</p>
+    </div>
+  </div>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <div class="stats-grid">
-      <div class="stat">
-        <h3>20,000+</h3>
-        <p>Happy Learners</p>
+  <!-- New Section -->
+  <section id="job-assistance">
+    <div class="job-assistance-container">
+        <div class="job-assistance-content">
+            <h2 class="job-assistance-title">Job Assistance Courses With Placement</h2>
+            <ul class="job-assistance-list">
+                <li>Beginner & Advanced Level Classes</li>
+                <li>Hands-On Learning in Placement</li>
+                <li>Best Practice for Interview Preparation Techniques</li>
+                <li>Lifetime Access for Student’s Portal, Study Materials, Videos & Top MNC Interview Questions</li>
+                <li>Affordable Fees with Best Curriculum Designed by Industrial Placement Experts</li>
+            </ul>
+            <button class="btn-primary">Enroll Now</button>
+        </div>
+        <div class="job-assistance-image">
+            <img src="assets/img/jobassistance.jpg" alt="Job Assistance Courses" />
+        </div>
+    </div>
+</section>
+
+<section id="what-we-provide">
+  <div class="container">
+    <h2 class="section-title">What We Provide</h2>
+    <div class="cards-container">
+      <div class="card">
+        <div class="card-img-container">
+          <img src="assets/img/training.png" alt="Training" class="card-img">
+        </div>
+        <h3 class="card-title" style="color: #0f0606;"><b>Comprehensive Training</b></h3>
+        <p class="card-description" style="color: #0f0606;">Our training programs ensure a seamless learning journey tailored for success.</p>
       </div>
-      <div class="stat">
-        <h3>500+</h3>
-        <p>Courses Offered</p>
+      <div class="card">
+        <div class="card-img-container">
+          <img src="assets/img/job search.png" alt="Job Search" class="card-img">
+        </div>
+        <h3 class="card-title" style="color: #0f0606;"><b>Job Search Assistance</b></h3>
+        <p class="card-description" style="color: #0f0606;">We provide expert guidance to help you secure your dream job effortlessly.</p>
       </div>
-      <div class="stat">
-        <h3>300+</h3>
-        <p>Placement Partners</p>
+      <div class="card">
+        <div class="card-img-container">
+          <img src="assets/img/abroadstudy.png" alt="Abroad Study" class="card-img">
+        </div>
+        <h3 class="card-title" style="color: #0f0606;"><b>Study Abroad Guidance</b></h3>
+        <p class="card-description" style="color: #0f0606;">Navigate your global education journey with our dedicated support and expertise.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="programs">
-    <h2>Our Top Programs</h2>
-    <div class="grid">
-      <div class="card">
-        <i class="fas fa-database"></i>
-        <h3>Data Science</h3>
-        <p>Master predictive analytics and big data tools.</p>
+<section id="achievements-section">
+  <h2 class="achievements-title">What We Achieved</h2>
+  <div class="achievements-grid">
+      <div class="achievement-card">
+          <h3 class="achievement-stat">20,000+</h3>
+          <p class="achievement-text">Happy Learners</p>
       </div>
-      <div class="card">
-        <i class="fas fa-robot"></i>
-        <h3>AI & Machine Learning</h3>
-        <p>Learn to build intelligent systems with AI.</p>
+      <div class="achievement-card">
+          <h3 class="achievement-stat">100+</h3>
+          <p class="achievement-text">Placement Partners</p>
       </div>
-      <div class="card">
-        <i class="fas fa-cloud"></i>
-        <h3>Cloud Computing</h3>
-        <p>Master AWS, Azure, and Google Cloud platforms.</p>
+      <div class="achievement-card">
+          <h3 class="achievement-stat">4+</h3>
+          <p class="achievement-text">Years of Excellence</p>
+      </div>
+      <div class="achievement-card">
+          <h3 class="achievement-stat">100+</h3>
+          <p class="achievement-text">Corporate Trainings</p>
+      </div>
+  </div>
+</section>
+
+
+<!-- Partners -->
+<section id="partners" class="partners">
+  <div class="container">
+    <h2 class="section-title">Our Partners</h2>
+    <div class="partners-carousel">
+      <div class="carousel-track">
+        <img src="assets/img/partners/flipkart.svg" alt="Flipkart">
+        <img src="assets/img/partners/param.jpg" alt="Param">
+        <img src="assets/img/partners/WIT_BIG.svg" alt="WIT">
+        <img src="assets/img/partners/CTSH_BIG.svg" alt="Cognizant">
+        <img src="assets/img/partners/walmart.svg" alt="Walmart">
+        <img src="assets/img/partners/partner6.png" alt="Partner 6">
+        <!-- Repeat for seamless scrolling -->
+        <img src="assets/img/partners/flipkart.svg" alt="Flipkart">
+        <img src="assets/img/partners/param.jpg" alt="Param">
+        <img src="assets/img/partners/WIT_BIG.svg" alt="WIT">
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="testimonials">
-    <h2>What Our Learners Say</h2>
-    <div class="testimonial-grid">
+<!-- Programs -->
+<section id="programs-section">
+  <h2 class="programs-title">Our Top Programs</h2>
+  <div class="programs-grid">
+    <div class="program-card">
+      <i class="fas fa-database" style="color: #0f0606;"></i>
+      <h3>Data Science</h3>
+      <p>Master predictive analytics and big data tools.</p>
+    </div>
+    <div class="program-card">
+      <i class="fas fa-robot" style="color: #0f0606;"></i>
+      <h3>AI & Machine Learning</h3>
+      <p>Learn to build intelligent systems with AI.</p>
+    </div>
+    <div class="program-card">
+      <i class="fas fa-cloud" style="color: #0f0606;"></i>
+      <h3>Cloud Computing</h3>
+      <p>Master AWS, Azure, and Google Cloud platforms.</p>
+    </div>
+    <div class="program-card">
+      <i class="fas fa-code" style="color: #0f0606;"></i>
+      <h3>Full Stack Development</h3>
+      <p>Learn front-end and back-end technologies.</p>
+    </div>
+    <div class="program-card">
+      <i class="fas fa-laptop" style="color: #0f0606;"></i>
+      <h3>Web Development</h3>
+      <p>Build modern, responsive websites with HTML, CSS, and JavaScript.</p>
+    </div>
+    <div class="program-card">
+      <i class="fas fa-mobile-alt" style="color: #0f0606;"></i>
+      <h3>Mobile App Development</h3>
+      <p>Create apps for Android and iOS using modern frameworks.</p>
+    </div>
+    <div class="program-card">
+      <i class="fas fa-sitemap" style="color: #0f0606;"></i>
+      <h3>ERP Systems</h3>
+      <p>Learn SAP and manage business processes effectively.</p>
+    </div>
+    <div class="program-card">
+      <i class="fas fa-layer-group" style="color: #0f0606;"></i>
+      <h3>Data Structers</h3>
+      <p>Master the art of organizing and optimizing data efficiently</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="learner-testimonials">
+  <h2 class="testimonials-title">What Our Learners Say</h2>
+  <div class="testimonials-grid">
       <div class="testimonial-card">
-        <p>"The trainers are outstanding. I secured my dream job in Data Science!"</p>
-        <h4>- Kavya S.</h4>
+          <p>"The trainers are outstanding. I secured my dream job in Data Science!"</p>
+          <h4>- Kavya S.</h4>
       </div>
       <div class="testimonial-card">
-        <p>"Placement support was exceptional. Thank you for the career boost!"</p>
-        <h4>- Aryan M.</h4>
+          <p>"Placement support was exceptional. Thank you for the career boost!"</p>
+          <h4>- Aryan M.</h4>
       </div>
-    </div>
-  </section>
+      <div class="testimonial-card">
+          <p>"Great hands-on experience in web development. I feel ready for the industry!"</p>
+          <h4>- Rahul P.</h4>
+      </div>
+  </div>
+</section>
 
+
+<section id="contact-us-section">
+  <h2 class="contact-title">Contact Us</h2>
+  <p class="contact-description">If you have any queries or need assistance, feel free to reach out.</p>
+  <button class="contact-button">Contact Now</button>
+</section>
+
+
+</main>
   <footer id="footer" class="footer" style=" background: linear-gradient(145deg, #1a1a1a, #0f0f0f);">
     <div class="container d-flex flex-column flex-lg-row justify-content-between align-items-center text-center text-lg-start">
       <!-- Section 1: Logo and Social Media -->
