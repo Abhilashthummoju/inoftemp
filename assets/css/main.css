@@ -727,21 +727,21 @@ section,
 .hero-images {
   position: relative;
   width: 100%;
-  height: 300px; /* Set a fixed height */
+  height:400px; /* Set a fixed height */
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  border-radius: 10%;
 }
 
 .hero-images img {
   position: absolute;
   width: 100%; /* Make images responsive */
   max-width: 600px; /* Limit maximum width */
-  height: auto; /* Maintain aspect ratio */
+  height: 100%; /* Maintain aspect ratio */
   opacity: 0;
   transition: opacity 1s ease-in-out;
-  border-radius: 5%;
 
 }
 
@@ -777,6 +777,7 @@ section,
   min-height: 75vh;
   max-width: 90vw;
   padding-top: 60px;
+  gap: 20px;
 }
 
 .hero h2 {
@@ -795,19 +796,6 @@ section,
   margin: 0 auto 30px auto;
 }
 
-.hero .carousel-control-prev,
-.hero .carousel-control-next {
-  width: 10%;
-}
-
-.hero .carousel-control-next-icon,
-.hero .carousel-control-prev-icon {
-  background: none;
-  font-size: 48px;
-  line-height: 1;
-  width: auto;
-  height: auto;
-}
 
 .hero .btn-get-started {
   font-weight: 500;
@@ -843,7 +831,7 @@ section,
 
 @media (max-width: 768px) {
   .hero .carousel-container {
-    min-height: 90vh;
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
   }
